@@ -4,7 +4,7 @@
 
 %STICK TO THE STRUCTURE THAT IS INDICATED TO ENSURE CONSISTENCY, WE WILL BE WRITING THIS CHAPTER WITH MANY PEOPLE 
 
-In this chapter, an overview of the trade-off of the concepts will be presented. Firstly, a set of concepts in three different passenger range categories will be created. A preliminary trade off of these concepts using only the quantitative parameters will be performed, in order to choose a winning concept from each passenger range that will enter the final trade-off. For this, the tool will be used to compute some useful outputs. The final trade-off, that follows after that, will then evaluate the full set of quantitative and qualitative parameters of the concepts, in order to choose the winning concept. In the final trade-off use will be made of the trade criteria defined in \autoref{CriteriaTools}, including the weighting factors found previously. 
+In this chapter, an overview of the trade-off of the concepts will be presented. Firstly, a set of concepts in three different passenger range categories will be created. A preliminary trade off of these concepts using only the quantitative parameters will be performed, in order to choose a winning concept from each passenger range that will enter the final trade-off. The preliminary trade off will be done by comparison a selection of key numerical outputs using the criteria tool. The final trade-off follows the preliminary one, which will evaluate the full set of quantitative and qualitative parameters of the concepts, in order to choose the winning concept. The final trade-off will make use of the trade criteria defined in \autoref{CriteriaTools}, including the weighting factors found in \autored{ch:Tra}. 
 
 \section{Design Definitions}
 In order to evaluate each design concept using the tools, some basic parameters including MTOW, cruise speed, range and OEW/MTOW ratio, must be determined. Since many concepts are novel, they are compared to existing vehicles to determine if the combination of parameters are realistic. In \autoref{fig:MTOW-Pax2} and \autoref{fig:Cruise-MTOW2}, the same statistical plots from \autoref{stats} are given with the concepts included as light-blue diamonds. In the case of MTOW and cruise speed, they fall within realistic margins as shown in \autoref{fig:MTOW-Pax2} and \autoref{fig:Cruise-MTOW2} respectively. The range of many of the concepts was reduced from the maximum available, which results in lower battery mass. This accounts for some difference from statistics, but still results in a feasible design. This is done to better suit the market needs. Moreover, all the designed concepts use the same battery, which has a battery energy density of 260 $Wh/kg$ and a battery power density of 2100 $W/kg$.
@@ -318,7 +318,7 @@ From the table it is clear that concept 20B is the best to proceed with. The ene
 %Present qualitative aspects for each final concept
 %run the final trade off
 %present the final 
-Now that the most feasible option for each vehicle passenger range has been selected, they . For clarity an overview of the inputs and outputs for the winning concepts in each category are shown below in \autoref{inputswin}. 
+Now that the most feasible option for each vehicle passenger range has been selected, they will be compared with each other. For clarity, an overview of the inputs and outputs for the winning concepts in each category are shown below in \autoref{inputswin} and \autoref{outputswin}. 
 
 \begin{table}[H]
 \captionsetup{justification=centering}
@@ -362,10 +362,14 @@ Downwash [m/s]                              & 51            &       33          
 \end{tabular}
 \end{table}
 
+In \autoref{sec:Criteria} the criteria on which the concepts will be scored were explained. The corresponding weight factors for all the criteria are tabulated in \autoref{subsec:weights}. For all of the criteria a scale from 1 to 5 will be created to normalise the values of the parameters. The weighted score for the quantitative criteria are then easily calculated. For the qualitative criteria, each team member gives a score from 1 to 5 to each of the concepts. These average score each concept had will then be weighted by the established weight factors. 
 
-NEED TO UPDATE THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ it 
 
-Naturally, this list of quantitative parameters is not the complete picture. There are other factors of a potential UAM system that are of relevance too. They are the ones that are of qualitative nature and have therefore not been examined in the tool. The factors that are looked at are the safety, the passenger experience, the ATM/UTM efforts needed, the susceptibility to harsh weather conditions and the modifications that would have to be done to the current regulations for a system to work. Each of these five factors will be given a score in the range from 1-5 and, after which this number is multiplied with the weight that was assigned to it in \autoref{subsec:weights}. A weighted average is computed for each of the concepts. All of the aforementioned can be found in table (REF TO TABLE) below. 
+A trade-off will be made between the winning concepts. 
+
+
+%Naturally, this list of quantitative parameters is not the complete picture. There are other factors of a potential UAM system that are of relevance too. They are the ones that are of qualitative nature and have therefore not been examined in the tool. The factors that are looked at are the safety, the passenger experience, the ATM/UTM efforts needed, the susceptibility to harsh weather conditions and the modifications that would have to be done to the current regulations for a system to work. Each of these five factors will be given a score in the range from 1-5 and, after which this number is multiplied with the weight that was assigned to it in \autoref{subsec:weights}. A weighted average is computed for each of the concepts. All of the aforementioned can be found in table (REF TO TABLE) below. 
 
 %THE ULTIMATE TABLE!!!!! THIS INCLUDES OUR CRITERIA WITH THEIR WEIGHTS AND THE SCORE THAT THEY GET. INCLUDE A WEIGHTED AVERAGE FOR EACH OF THE CONCEPTS AND THERE WE HAVE IT: ---> OUR WINNING CONCEPT <--- 
 
@@ -393,5 +397,13 @@ Some of the more crucial risks have been identified an are listed below.
     \item The regulations in 2050 do not allow the usage of UAM vehicles yet 
 \end{enumerate}
 
-For the highest risks there are things that can be done to mitigate these risks. Examples are are as follows. For 1, make a conservative first guess of the MTOW. For 4, Considered a smaller and wealthier target group. For 6, promote UAM safety awareness through advertisements and demonstrations. For 7, ensure the fire is contained, plan emergency procedures and test protective casings. For 8 and 9, keep open the option to use swappable batteries until the detailed design phase. For 10, adjust the route networks in such a way that airspace needed does not interfere with flightpaths.   
+For the highest risks, there are strategies that can be done mitigate these risks. These are done for the highest ranking risks. For 1, make a conservative first guess of the MTOW. For 4, Considered a smaller and wealthier target group. For 6, promote UAM safety awareness through advertisements and demonstrations. For 7, ensure the fire is contained, plan emergency procedures and test protective casings. For 8 and 9, keep open the option to use swappable batteries until the detailed design phase. For 10, adjust the route networks in such a way that airspace needed does not interfere with flightpath. All these mitigation strategies are essential but will move you away from the ideal business strategy. Two risk maps are shown in \autoref{riskmap123}, they show the risks in a chart before and after riks mitigation. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{Figures/riskmap.pdf}
+    \caption{Risk map before and after risk mitigation}
+    \label{riskmap123}
+\end{figure}
+
 

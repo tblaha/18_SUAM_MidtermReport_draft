@@ -80,7 +80,7 @@ Each of the important aspects of the solution highlighted above can be assessed 
 
 \begin{itemize}
     \item \underline{ATM/UTM Efforts Needed}: This criterion analyses the level of complexity and the amount of effort needed to safely and efficiently organize and manage the system of vehicles in a city. The level of complexity is deduced by determining the level of interference with nearby airports, hospitals, military training grounds, drones, etc. Intersections of vehicle flight paths may occur, resulting in a more complex system,  as multiple intersections per fixed route may occur, possibly resulting in collision between two vehicles if the system is not well defined and managed. Apart from interference with other vehicles and areas, the positioning of landing sites are taken into account as well, as a 1-2 pax vehicle may easily land on top of a building, whereas a 20+ pax vehicle requires a properly designed vertiport.
-    \item \underline{Susceptibility to weather conditions}: This criterion analyses the resistance of the vehicle to bad weather conditions like wind gusts during flight or crosswinds during vertical take-off and landing. Furthermore, the effects of air density and rain on the performance of the vehicle are analysed and taken into account as well. 
+    \item \underline{Susceptibility to weather conditions}: In this criterion the resistance of the vehicle to bad weather conditions like wind gusts during flight or crosswinds during vertical take-off and landing are analysed. Furthermore, the effects of air density and rain on the performance of the vehicle are analysed and taken into account as well. 
     \item \underline{Modification of current regulations}: This criterion takes the current FAA regulations into account. These regulations include those with respect to the airspace, various weight classes and regulation concerning autonomy of aircraft. 
 
   
@@ -162,11 +162,11 @@ In order to get values for the different criteria and compare different concepts
 
 \subsection{Design Vector}
 \label{subsec:desvector}
-A numerical representation of the systems is the foundation of the tools outlined in this section, so its precise definition is given here to aid understanding the layout of the tools.
+A numerical representation of the systems is the foundation of the tools outlined in this section, so its precise definition is given here to aid understanding the layout of the tools. An overview of the operational parameters is given in \autoref{OperationalIn}, with the atmospheric parameters in \autoref{AtmosphereIn}.
 
-\paragraph{Operational Parameters}
+%\paragraph{Operational Parameters}
 
-\begin{table}[H]
+\begin{table}[]
 \centering
 \captionsetup{justification=centering}
 \caption{Operational inputs}
@@ -210,7 +210,7 @@ A numerical representation of the systems is the foundation of the tools outline
 \end{tabular}
 \end{table}
 
-\begin{table}[H]
+\begin{table}[]
 \centering
 \captionsetup{justification=centering}
 \caption{Atmosphere inputs}
@@ -569,8 +569,13 @@ $p_{m_L}$ and $p_{m_T}$ are the root mean square (RMS) sound pressures for loadi
 where $T/A$ is the rotor disk loading; $K_2$ is a semi-empirical constant. Although vortex noise is broadband it has a peak frequency $f_{peak}$, which is a function of 0.7 times the tip speed, the projected blade thickness $h$ and the Strouhal number St. With the peak frequency known, the vortex-noise frequency spectrum can be obtained using the method in Appendix D B of \cite{Brown2018}.
 
 
+\paragraph{A-Weighting Scheme}
+
+Human ears have different responses at different frequencies. When it comes to social acceptance, it is more fitting to choose dBA as a metric for perceived sound pressure level, since it amplifies sounds being emitted close to 3kHz. Appendices B and D C in \cite{Brown2018} give a procedure on how to apply the weighting for tonal and vortex noise, respectively.
+
 \paragraph{Atmospheric Attenuation}
 
+On top of the procedure for noise prediction outlined in \cite{Brown2018}, a model for atmospheric attenuation based on frequency of emitted sound and atmospheric parameters was implemented \footnote{\url{ https://en.wikibooks.org/wiki/Engineering_Acoustics/Outdoor_Sound_Propagation} accessed on 20/05/2019.}.
 
 
 

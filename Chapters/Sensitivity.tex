@@ -9,9 +9,7 @@ It was determined that the pad cost could be a major driver of ticket price. The
 \section{Minimum Trip Range}
 By limiting the trip range to a certain minimum, there are two effects that cause the ticket price to drop as shown in \autoref{fig:sens02}. First, the trip efficiency increases if no short trips are allowed (shown in \autoref{fig:sens03}), which reduces operating cost. In addition, due to the calculation method, a larger market share is used as the minimum increases. Naturally, a larger market share allows for a lower ticket price in the long run. 
 
-\autoref{fig:sens1} shows that the Total system area increases due to the increased market share when increasing minimum range. This would increase the pad costs (driving ticket price), but the increased market share still allows for a reduce in final ticket price. Going forward, the demand must be considered to determine how much market share will be possible in reality. This is an important risk to consider, as it drives the final success of the system. The current tool assumes that demand is always 
-
-
+\autoref{fig:sens1} shows that the Total system area increases due to the increased market share when increasing minimum range. This would increase the pad costs (driving ticket price), but the increased market share still allows for a reduce in final ticket price. Going forward, the demand must be considered to determine how much market share will be possible in reality. This is an important risk to consider, as it drives the final success of the system. The current tool assumes that demand is essentially infinite, but in reality is likely to be tied directly to trip range.
 
 \begin{figure}[H]
 \begin{subfigure}[t]{0.33\textwidth}
@@ -69,13 +67,17 @@ By limiting the trip range to a certain minimum, there are two effects that caus
 \end{figure}
 
 
+\section{Cruise Altitude}
+As expected, the energy required and overall cost increases if a higher cruise altitude is required. This altitude may come from noise and ATC requirements. It is interesting to note that the 2 and 20 passenger vehicles outperform one another depending on this altitude, as shown in in \autoref{fig:sens3}.
+
+\section{Vehicle Weight and Energy Consumption}
 Some sensitivities are intuitively explained and verify the correct working of the tool. For example, an increase in the fraction of empty and maximum operational mass causes a higher ticket price. The heaviest vehicle is effected most by that effect as can be told by comparing the slopes in figure \ref{fig:sens4}. A more efficient cruise causes the energy consumption to be lower which also decreases OEW (OEW is considered an output of the tool here, since it is converged on every run). 
 
 Counterintuitive is that ticket price can increase with increasing energy density. This does not seem to make sense at first. However, consider that charge rate density (expressed in W/kg) is kept constant when energy density is perturbed. Recall, that the batteries recharging time is modelled as inversely proportional to the charge rate and proportional to the energy needed for every given trip. Since the chosen vehicles are energy limited (not power limited during take off) this means that battery mass decreases as energy density increases. However, the trip energy demand is not linear in the battery mass (varies approximately as $MTOW\sqrt{MTOW}$ during the hovering phases), as opposed to the charge rate which \emph{is} inversely proportional to the battery mass.
 
-This way, charge time actually increases since the increase in charge rate with battery mass is lower than the increase in energy demand with battery mass and so a longer turnaround time is needed for recharging which necessitates a bigger fleet and more vertiports for the same passenger throughput. This means that we will have to find battery technology that does not just increase energy density, since a smaller battery does not necessarily improves economic performance; a very interesting result. The reason for the 20 person vehicle in figure \ref{fig:sens6} not following this trend is because the turnaround time is limited by boarding procedures, not charging time, so a longer charging time does not deteriorate ticket price. The bottom line to this is that optimisation for the smallest necessary battery weight, as done in tool, may not yield the lowest ticket price even if it improves sustainability through less battery mass and lower energy usage per passenger kilometer.
+This way, charge time actually increases since the increase in charge rate with battery mass is lower than the increase in energy demand with battery mass and so a longer turnaround time is needed for recharging which necessitates a bigger fleet and more vertiports for the same passenger throughput. This means that we will have to find battery technology that does not just increase energy density, since a smaller battery does not necessarily improves economic performance; a very interesting result. The reason for the 20 person vehicle in \autoref{fig:sens6} not following this trend is because the turnaround time is limited by boarding procedures, not charging time, so a longer charging time does not deteriorate ticket price. The bottom line to this is that optimisation for the smallest necessary battery weight, as done in tool, may not yield the lowest ticket price even if it improves sustainability through less battery mass and lower energy usage per passenger kilometre.
 
-Also; not shown here, the system area increases for a higher L/D and if pad infrastructure costs are higher than shown here, the sensitivity in L/D can reverse and a higher L/D actually increases ticket prices, if optimisation for the lightest possible MTOW is performed, as usual.
+Also; not shown here, the system area increases for a higher L/D and if pad infrastructure costs are higher than shown here, the sensitivity in L/D can reverse and a higher L/D actually increases ticket prices, if optimisation for the lightest possible MTOW is performed, as usual. Compare with \autoref{fig:sens5}.
 
 \begin{figure}[H]
 \begin{subfigure}[t]{0.33\textwidth}
@@ -107,16 +109,16 @@ Also; not shown here, the system area increases for a higher L/D and if pad infr
 \begin{figure}[H]
 \begin{subfigure}[t]{0.33\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{Figures/Cruise_TPrice_perkmNOPAD.png}
+    \includegraphics[width=\textwidth]{Figures/CRate_TPrice_perkmNOPAD.png}
     \captionsetup{justification=centering}
-    \caption{OEW/MTOW}
+    \caption{Ticket price per km vs. Charge rate density}
     \label{fig:sens7}
 \end{subfigure}
 \begin{subfigure}[t]{0.33\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{Figures/CRate_TPrice_perkmNOPAD.png}
+    \includegraphics[width=\textwidth]{Figures/Cruise_TPrice_perkmNOPAD.png}
     \captionsetup{justification=centering}
-    \caption{}
+    \caption{Ticket price per km vs. Cruise velocity}
     \label{fig:sens8}
 \end{subfigure}
 \begin{subfigure}[t]{0.33\textwidth}
