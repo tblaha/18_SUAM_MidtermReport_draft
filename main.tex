@@ -23,8 +23,10 @@
 \usepackage{tabularx}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \usepackage{ltxtable, lscape}
+\usepackage[final]{pdfpages}
 
-\renewcommand{\nomname}{\huge{\sffamily Nomenclature}\addcontentsline{toc}{section}{Nomenclature}}
+
+\renewcommand{\nomname}{\huge{\sffamily \vspace{-40mm}}\addcontentsline{toc}{section}{Nomenclature}}
 
 \setlength{\nomitemsep}{0pt}
 
@@ -43,14 +45,23 @@
 \input{Chapters/Abbreviations.tex}
 
 
+\renewcommand{\chapterautorefname}{Chapter} %to make the chapter with a capital letter
+\renewcommand{\sectionautorefname}{Section} %to make the section with a capital letter
+
+
+% cram toc
+\usepackage{titlesec}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{1} % instead of 2
+\renewcommand{\cftbeforetoctitleskip}{-70mm}
+\renewcommand\cftchapafterpnum{\vskip{0pt}}
+\renewcommand\cftsecafterpnum{\vskip{0pt}}
 
 
 
 
 \begin{document}
 
-\renewcommand{\chapterautorefname}{Chapter} %to make the chapter with a capital letter
-\renewcommand{\sectionautorefname}{Section} %to make the section with a capital letter
 
 
 
@@ -128,6 +139,8 @@ by
 
 \setcounter{page}{3}
 
+\newpage
+%{\huge{\sffamily \textbf{Nomenclature} }}
 \begin{multicols}{2}
 \newcommand{\nomunit}[1]{%
 \renewcommand{\nomentryend}{\hspace*{\fill}#1}}
@@ -139,10 +152,10 @@ by
 \printnoidxglossary[type=\acronymtype,  title=List of Abbreviations]
 \printacronyms
 
+\input{Chapters/Introduction.tex}
+
 
 \mainmatter
-
-\input{Chapters/Introduction.tex}
 
 \input{Chapters/ExecutiveSummary.tex}
 \input{Chapters/MarketAnalysis.tex}

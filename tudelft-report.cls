@@ -597,7 +597,7 @@
     {0pt}
     {\Huge\color{title}}
 %% Separate the title from the text by two empty lines.
-\titlespacing{\part}{0pt}{0pt}{2\baselineskip}
+\titlespacing{\part}{0pt}{0pt}{1\baselineskip} % changed from 2 to 1 on 190523
 %% In the table of contents, the part name is preceded by an empty line, printed
 %% in bold, and not followed by a line of dots.
 \dottedcontents{part}[0em]{\vspace{\baselineskip}\titlefont\bfseries}{1.5em}{0pc}
@@ -608,7 +608,7 @@
     {\vspace{-20mm}\fontsize{96}{96}\selectfont\thechapter} % changed to -20mm (from 0) on 26-04-19. More space...
     {0pt}
     {\chaptitlestyle\Huge\color{title}}
-\titlespacing{\chapter}{0pt}{0pt}{2\baselineskip}
+\titlespacing{\chapter}{0pt}{0pt}{1\baselineskip}% changed from 2 to 1 on 190523
 %% In the table of contents, a chapter is similar to a part, except that it is
 %% preceded by half an empty line.
 \dottedcontents{chapter}[1.5em]{\vspace{0.5\baselineskip}\titlefont\bfseries}{1.5em}{0.5pc}
@@ -672,4 +672,4 @@
 
 
 % cram factor
-\renewcommand{\baselinestretch}{0.9} 
+\renewcommand{\baselinestretch}{1} 

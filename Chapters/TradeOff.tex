@@ -7,7 +7,7 @@
 In this chapter, an overview of the trade off of concepts will be presented. Firstly, a set of concepts in three different passenger range categories will be created. A preliminary trade off of these concepts using only the quantitative parameters will be performed, in order to choose a winning concept from each passenger range that will enter the final trade-off. For this, the tool will be used to compute some useful outputs. The final trade-off, that follows after that, will then evaluate the full set of quantitative and qualitative parameters of the concepts, in order to choose the winning concept. In the final trade-off use will be made of the trade criteria defined in \autoref{CriteriaTools}, including the weighting factors found previously. 
 
 \section{Design Definitions}
-In order to evaluate each design concept using the tools, some basic parameters including MTOW, cruise speed, range and OEW/MTOW ratio, must be determined. Since many concepts are novel, they are compared to existing vehicles to determine if the combination of parameters are realistic. In \autoref{fig:concept_compare}, the same statistical plots from \autoref{stats} are given with the concepts included as light-blue diamonds. In the case of MTOW and cruise speed, they fall within realistic margins as shown in \autoref{fig:MTOW-Pax2} and \autoref{fig:Cruise-MTOW2} respectively. The range of many of the concepts was reduced from the maximum available, which results in lower battery mass. This accounts for some difference from statistics, but still results in a feasible design. This is done to better suit the market needs.
+In order to evaluate each design concept using the tools, some basic parameters including MTOW, cruise speed, range and OEW/MTOW ratio, must be determined. Since many concepts are novel, they are compared to existing vehicles to determine if the combination of parameters are realistic. In \autoref{fig:MTOW-Pax2} and \autoref{fig:Cruise-MTOW2}, the same statistical plots from \autoref{stats} are given with the concepts included as light-blue diamonds. In the case of MTOW and cruise speed, they fall within realistic margins as shown in \autoref{fig:MTOW-Pax2} and \autoref{fig:Cruise-MTOW2} respectively. The range of many of the concepts was reduced from the maximum available, which results in lower battery mass. This accounts for some difference from statistics, but still results in a feasible design. This is done to better suit the market needs.
 
 \begin{figure}[H]
 \begin{subfigure}[t]{0.5\textwidth}
@@ -81,8 +81,8 @@ OEW/MTOW           &          0.45          &         0.40          &           
 \# Passengers {[}-{]}                    &          2          &         2           &             2       \\
 Range {[}km{]}                           &          60          &         60     &            60        \\
 Max Dimension {[}m{]}                    &         5.75           &          5          &            6        \\
-Battery Energy density {[}Wh/kg{]}       &           262.90         &       262.90  &            261.18        \\
-Battery Power density {[}W/kg{]}         &           2103.16         &      2103.16 &            2089.41        \\
+Battery Energy density {[}Wh/kg{]}       &           260         &       260  &            260        \\
+Battery Power density {[}W/kg{]}         &           2100         &      2100 &            2100        \\
 L/D {[}-{]}                              &           17         &        12            &           16         \\
 Radius of rotors (x number of rotors) &   0.75 (1x) \& 0.4 (2x) \& 0.5 (2x)                &    0.85 (2x) \& 0.8 (2x)&            0.85 (x4)       \\
 Cruise Velocity {[}m/s{]}                &          42          &        32            &            37        \\ \bottomrule
@@ -103,15 +103,15 @@ The inputs that were mentioned in the previous section were put in a tool. The m
 \begin{tabular}{@{}llll@{}}
 \toprule
 \textbf{Parameter}                           & \textbf{Concept 2A} & \textbf{Concept 2B} & \textbf{Concept 2C} \\ \midrule
-\# Vehicles {[}-{]}                          &          12449          &        15715        &           13880         \\
-\# Pads {[}-{]}                               &       2836           &            3031      & 2937  \\
-\# Trips/day {[}-{]}                         &          283108          &     307614          &           293570         \\
-\# Payload Range Energy Efficiency {[}Wh/ (pax-km){]}           &          907          &       790     &        915      \\
-\# Ticket price {[}\$/km{]}                  & 4.94                   & 4.12                   & 5.30                    \\
-\# Ticket price {[}\$/km-pad costs{]}        & 0.92                    & 0.91                   & 0.94                   \\
+\# Vehicles {[}-{]}                          &         9800          &        12900        &           11200         \\
+\# Pads {[}-{]}                               &       1570           &    1620      &  1610  \\
+\# Trips/day {[}-{]}                         &          283000          &     308000          &           294000         \\
+\#  PREE {[}Wh/(pax-km){]}           &          910          &       790     &        915      \\
+\# Ticket price {[}\$/km{]}                  & 2.86                   & 2.34                   & 3.04                    \\
+\# Ticket price {[}\$/km-pad costs{]}        & 0.64                    & 0.62                   & 0.65                   \\
 \# Passengers/day {[}-{]}                    &          30500          &     32700        &           31400        \\
-Vertiport Area {[}m\textsuperscript{2}{]}    &          757.87          &      625.4        &           830.1      \\
-Total System Area {[}m\textsuperscript{2}{]} &          2814423          &     1479582  &         1762059         \\
+Vertiport Area {[}m\textsuperscript{2}{]}    &          760          &      630        &           830      \\
+Total System Area {[}km\textsuperscript{2}{]} &          1.19         &     1.01  &         1.34         \\
 Total Board Time {[}s{]}                     &          210          &     210               &               210     \\
 Noise {[}dBA{]}                              &             82       &     71          &           73        \\
 Downwash {[}m/s{]}                              &             51       &     34          &           36        \\ \bottomrule
@@ -178,11 +178,11 @@ OEW/MTOW           & 0.35                   & 0.35                   & 0.35     
 \# Passengers {[}-{]}                    & 4                   &  4                  & 6                   \\
 Range {[}km{]}                           & 54                   &  60                  & 45                    \\
 Max Dimension {[}m{]}                    & 9                   & 10                    & 9                   \\
-Battery Energy density {[}Wh/kg{]}       & 259.5                   & 259.5                    & 259.5                      \\
-Battery Power density {[}W/kg{]}         & 2075.8                   & 2075.8                   &                     \\
+Battery Energy density {[}Wh/kg{]}       & 260                   & 260                    & 260                      \\
+Battery Power density {[}W/kg{]}         & 2100                   & 2100                   &     2100                \\
 L/D {[}-{]}                              & 17                   & 15                   & 4                    \\
 Radius of rotors (x number of rotors)      & 0.15 (x36)           & 1 (x4); 1.5 (x1); 0.7 (x2) & 1.5 (x8)                    \\
-Cruise Velocity {[}m/s{]}                & 59.9                   & 81.9                    & 34.2                    \\ \bottomrule
+Cruise Velocity {[}m/s{]}                & 60                   & 82                    & 34                    \\ \bottomrule
 \end{tabular}
 
 \end{table}
@@ -200,15 +200,15 @@ After designing the different vehicles a trade-off has been done to come up with
 \begin{tabular}{@{}llll@{}}
 \toprule
 \textbf{Parameter}                           & \textbf{Electric jet 4} & \textbf{Tilt-wing 4} & \textbf{Gondola 6} \\ \midrule
-\# Vehicles {[}-{]}                          & 5087                   & 4601                   & 5625                   \\
-\# Pads {[}-{]}                              & 1361                   & 1405                   & 1316                    \\
-\# Trips/day {[}-{]}                         & 130584                   & 124024               & 100388                   \\
-\# PREE {[}Wh/(pax-km){]}                   & 1165                     & 667                    & 1510  \\
-\# Ticket price {[}\$/km{]}                  & 5.31                   & 6.69                   & 4.73                    \\
-\# Ticket price {[}\$/km-pad costs{]}        & 0.65                    & 0.59                   & 0.70                   \\
-\# Passengers/day {[}-{]}                    & 281328                   & 269148                   & 315788                    \\
-Vertiport Area {[}m\textsuperscript{2}{]}    & 1618                   & 2874                   & 1618                    \\
-Total System Area {[}km\textsuperscript{2}{]}& 2.202                   & 2.725                   & 2.129                   \\
+\# Vehicles {[}-{]}                          & 4000                   & 3350                   & 4730                   \\
+\# Pads {[}-{]}                              & 840                   & 800                   & 880                    \\
+\# Trips/day {[}-{]}                         & 131000                   & 124000               & 100000                   \\
+\# PREE {[}Wh/(pax-km){]}                   & 1170                     & 670                    & 1510  \\
+\# Ticket price {[}\$/km{]}                  & 3.35                   & 3.85                   & 3.25                    \\
+\# Ticket price {[}\$/km-pad costs{]}        & 0.51                    & 0.42                   & 0.58                   \\
+\# Passengers/day {[}-{]}                    & 281000                   & 269000                   & 316000                    \\
+Vertiport Area {[}m\textsuperscript{2}{]}    & 1620                   & 2870                   & 1620                    \\
+Total System Area {[}km\textsuperscript{2}{]}& 1.36                   & 1.55                   & 1.42                   \\
 Total Board Time {[}s{]}                     & 300                    & 300                   & 390                   \\
 rplNoise {[}dBA{]}                              & 110                   & 74                   & 90                    \\
 Downwash {[}m/s{]}                              &             96       &     33          &          26        \\\bottomrule
@@ -264,16 +264,16 @@ The three options are summarised in table \autoref{20input}. They will be inputt
 \begin{tabular}{@{}llll@{}}
 \toprule
 \textbf{Parameter}                       & \textbf{Concept 20A} & \textbf{Concept 20B} & \textbf{Concept 20C} \\ \midrule
-MTOW {[}kg{]}                            &    8975                &       6914             &  12064                  \\
+MTOW {[}kg{]}                            &    9000                &       7000             &  12000                  \\
 OEW/MTOW           &        45            &           45         &      40              \\
 \# Passengers {[}-{]}                    &        21            &        20            &       20             \\
 Range {[}km{]}                           &        60            &        60            &           20         \\
 Max Dimension {[}m{]}                    &          18         &        18            &          16          \\
-Battery Energy density {[}Wh/kg{]}       &         262.9            &     262.9               &       250.7             \\
-Battery Power density {[}W/kg{]}         &           2103.2        &        2103.2            &         2500.9           \\
+Battery Energy density {[}Wh/kg{]}       &         260            &     260               &       250             \\
+Battery Power density {[}W/kg{]}         &           2100        &        2100            &         2500           \\
 L/D {[}-{]}                              &         8.0           &        13            &     2               \\
 Radius of rotors (x number of rotors)  &           2.5 (x4)         &   1.85 (x4), 0.85 (x4)                 &     6 (1x)               \\
-Cruise Velocity {[}m/s{]}                &          83.3          &        111.1            &  41.67                  \\ \bottomrule
+Cruise Velocity {[}m/s{]}                &          83          &        111           &  42                 \\ \bottomrule
 \end{tabular}
 
 \end{table}
@@ -292,17 +292,17 @@ As mentioned before, the inputs that were specified in the previous section are 
 \begin{tabular}{@{}llll@{}}
 \toprule
 \textbf{Parameter}                           & \textbf{Concept 20A} & \textbf{Concept 20B} & \textbf{Concept 20C} \\ \midrule
-\# Vehicles {[}-{]}                          &       1777             &     1703            &      1691                 \\
-\# Pads {[}-{]}                              &         660           &      652           &          645            \\
-\# Trips/day {[}-{]}                         &         25736           &       26024          &         19856               \\
-\# Passenger Range Energy Efficiency {[}Wh/(pax*km){]}           &        1688           &       1230         &         5156.1            \\
-\# Ticket price per kilometre {[}\$/(km){]} &           9.03           &           9.28       &        13.70               \\
-\# Ticket price {[}\$/km-pad costs{]}        & 0.67                    &      0.65            &   --            \\
-\# Passengers/day {[}-{]}                    &         268430           &       259370          &      208628               \\
-Vertiport Area {[}m\textsuperscript{2}{]}    &           5699         &        5699         &        4561              \\
-Total System Area {[}m\textsuperscript{2}{]} &       2815800             &      2793200           &       2941300               \\
+\# Vehicles {[}-{]}                          &       1600             &     1500            &      1700                 \\
+\# Pads {[}-{]}                              &         570           &      550           &          645            \\
+\# Trips/day {[}-{]}                         &         25800           &       26000          &         20000               \\
+\#  PREE {[}Wh/(pax-km){]}           &        1690           &       1230         &         5160            \\
+\# Ticket price per kilometre {[}\$/(km){]} &           7.81           &          7.84       &        13.70               \\
+\# Ticket price {[}\$/km-pad costs{]}        & 0.63                    &      0.59            &   --            \\
+\# Passengers/day {[}-{]}                    &         268000           &       259000          &      209000               \\
+Vertiport Area {[}m\textsuperscript{2}{]}    &           5700         &        5700         &        4600              \\
+Total System Area {[}km\textsuperscript{2}{]} &       3.23             &      3.12           &       2.94               \\
 Total Board Time {[}s{]}                     & 1065                   &     1020            &      1020                \\
-Noise {[}dBA{]}                              &           90.0        &      89.9           &       94.0                   \\
+Noise {[}dBA{]}                              &           90        &      90           &       94                  \\
 Downwash {[}m/s{]}                              &             45       &     48          &  --   \\ \bottomrule
 \end{tabular}
 
@@ -327,16 +327,16 @@ Now that the most feasible options for each vehicle passenger range have been se
 \begin{tabular}{llll}
 \hline
 \textbf{Parameter}                    & \textbf{1-2 pax}      & \textbf{4-6 pax} & \textbf{20+ pax}    \\ \hline
-MTOW {[}kg{]}                         & 740                   &                  & 7418                \\
-OEW/MTOW        & 45                    &                  & 45                  \\
-\# Passengers {[}-{]}                 & 2                     &                  & 20                  \\
+MTOW {[}kg{]}                         & 575                   &    971              & 7418                \\
+OEW/MTOW        & 0.40                    &   0.35          & 0.45                  \\
+\# Passengers {[}-{]}                 & 2                     &      4            & 20                  \\
 Range {[}km{]}                        & 60                    &                  & 60                  \\
 Max Dimension {[}m{]}                 & 5                     &                  & 18                  \\
-Battery Energy density {[}Wh/kg{]}    & 262.90                &                  & 262.9               \\
-Battery Power density {[}W/kg{]}      & 2103.16               &                  & 2103.2              \\
+Battery Energy density {[}Wh/kg{]}    & 260                &                  & 260               \\
+Battery Power density {[}W/kg{]}      & 2100               &                  & 2100              \\
 L/D {[}-{]}                           & 12                    &                  & 13                  \\
 Radius of rotors (x number of rotors) & 0.85 (2x) \& 0.8 (2x) &                  & 2.5 (x4), 0.85 (x4) \\
-Cruise Velocity {[}m/s{]}             & 70                    &                  & 111.1               \\ \hline
+Cruise Velocity {[}m/s{]}             & 32                    &                  & 111.1               \\ \hline
 \end{tabular}
 \end{table}
 
@@ -347,23 +347,25 @@ Cruise Velocity {[}m/s{]}             & 70                    &                 
 \begin{tabular}{llll}
 \hline
 \textbf{Parameter}                          & \textbf{1-2 pax} & \textbf{4-6 pax} & \textbf{20+ pax} \\ \hline
-\# Vehicles {[}-{]}                         & 8602             &                  & 1230             \\
-\# Pads {[}-{]}                             & 2366             &                  & 491              \\
-\# Trips/day {[}-{]}                        & 251722           &                  & 19298            \\
-\# Energy usage {[}Wh/(pax*km){]}           & 1266.3           &                  & 1406.0           \\
-\# Ticket price per kilometre {[}\$/(km){]} & 4.11             &                  & 9.36             \\
-\# Passengers/day {[}-{]}                   & 275470           &                  & 202758           \\
-Vertiport Area {[}m\textsuperscript{2}{]}   & 625.4            &                  & 5699             \\
-Total System Area {[}m\textsuperscript{2}   & 1479582          &                  & 2793200          \\
+\# Vehicles {[}-{]}                         & 12900             &                  & 1230             \\
+\# Pads {[}-{]}                             & 1620             &                  & 491              \\
+\# Trips/day {[}-{]}                        & 308000           &                  & 19298            \\
+\# PREE {[}Wh/(pax-km){]}                   & 790           &                  & 1406.0           \\
+\# Ticket price per kilometre {[}\$/(km){]} & 4.12             &                  & 9.36             \\
+\# Passengers/day {[}-{]}                   & 32700           &                  & 202758           \\
+Vertiport Area {[}m\textsuperscript{2}{]}   & 630            &                  & 5699             \\
+Total System Area {[}km\textsuperscript{2}  & 1.48          &                  & 2793200          \\
 Total Board Time {[}s{]}                    & 210              &                  & 1020             \\
-Noise {[}dBA{]}                             & 73.5             &                  & 84.5             \\ \hline
+Noise {[}dBA{]}                             & 71             &                  & 84.5             \\ \hline
 \end{tabular}
 \end{table}
 
 
+NEED TO UPDATE THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 Naturally, this list of quantitative parameters is not the complete picture. There are other factors of a potential UAM system that are of relevance too. They are the ones that are of qualitative nature and have therefore not been examined in the tool. The factors that are looked at are the safety, the passenger experience, the ATM/UTM efforts needed, the susceptibility to harsh weather conditions and the modifications that would have to be done to the current regulations for a system to work. Each of these five factors will be given a score in the range from 1-5 and, after which this number is multiplied with the weight that was assigned to it in \autoref{subsec:weights}. A weighted average is computed for each of the concepts. All of the aforementioned can be found in table (REF TO TABLE) below. 
 
-THE ULTIMATE TABLE!!!!! THIS INCLUDES OUR CRITERIA WITH THEIR WEIGHTS AND THE SCORE THAT THEY GET. INCLUDE A WEIGHTED AVERAGE FOR EACH OF THE CONCEPTS AND THERE WE HAVE IT: ---> OUR WINNING CONCEPT <--- 
+%THE ULTIMATE TABLE!!!!! THIS INCLUDES OUR CRITERIA WITH THEIR WEIGHTS AND THE SCORE THAT THEY GET. INCLUDE A WEIGHTED AVERAGE FOR EACH OF THE CONCEPTS AND THERE WE HAVE IT: ---> OUR WINNING CONCEPT <--- 
 
 
 
