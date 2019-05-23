@@ -196,13 +196,13 @@ A numerical representation of the systems is the foundation of the tools outline
                        &    obj.obs\_location.r     &    m    &   \begin{tabular}[c]{@{}l@{}}100 we are taking as the average skyscraper\\ height in downtown LA. So take-off in highly\\ populated areas will occur at 100 m altitude\end{tabular}  \\ \cline{2-4}
                        &    obj.cost.grcrew\_daily\_time     &    s/day/worker    &   Active working time ground crew  \\ \cline{2-4}
                        &    obj.cost.perhub     &    USD/hub    &   Cost to build a hub  \\ \cline{2-4}
-                       &    obj.clearancegamma     &    rad    &   XXX  \\ \Xhline{2\arrayrulewidth}
+                       &    obj.clearancegamma     &    rad    &   Clearance flight path angle  \\ \Xhline{2\arrayrulewidth}
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Variable}}}}  
                        &    obj.piloting     &    -    &   'piloted' or 'autonomous'  \\ \cline{2-4}
-                       &    obj.min\_range     &    m    &   Minimum range???  \\ \cline{2-4}
+                       &    obj.min\_range     &    m    &   Minimum range  \\ \cline{2-4}
                        &    obj.cruise.vel     &    m/s    &   Cruise velocity  \\ \cline{2-4}
                        &    obj.climb.vclimb     &    m/s    &   Average velocity, climb phase  \\ \cline{2-4}
-                       &    obj.climb.gamma     &    rad???    &   Average forward velocity, climb phase \\ \cline{2-4}
+                       &    obj.climb.gamma     &    rad    &   Flight path angle, climb phase \\ \cline{2-4}
                        &    obj.pilots.num     &    -    &   Number of pilots per vehicle  \\ \cline{2-4}
                        &    obj.pilots.opsrate     &    -    &   \begin{tabular}[c]{@{}l@{}}Ratio pilot billed hours over flight operations\\ hours\end{tabular}   \\ \cline{2-4}
                        &    obj.cost.maint\_hours     &    -    &   Ratio maintenance hours over flight hours  \\ \cline{2-4}
@@ -332,10 +332,10 @@ This same energy calculation can also be used to determine the energy requiremen
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Fixed}}}}  
                        &    obj.pax\_mass     &    kg    &   \begin{tabular}[c]{@{}l@{}}Passenger+payload mass (per\\ passenger)\end{tabular}  \\ \cline{2-4} 
                        &    obj.coax.trim     &    -    &   \begin{tabular}[c]{@{}l@{}}Coaxial rotor; ratio between lower rotor pitch\\ and upper rotor pitch\end{tabular}  \\ \cline{2-4}
-                       &    obj.coax.kappaint     &    XXX    &   \begin{tabular}[c]{@{}l@{}}Coaxial rotor; induced power interference\\ factor\end{tabular}  \\ \cline{2-4}
-                       &    obj.coax.rd     &    XXX    &   Coaxial rotor; contraction radius  \\ \cline{2-4}
-                       &    obj.cost.perkgmtow     &    USD    &   XXX  \\ \cline{2-4}
-                       &    obj.cost.avionics     &    USD    &   XXX  \\ \cline{2-4}
+                       &    obj.coax.kappaint     &    -    &   \begin{tabular}[c]{@{}l@{}}Coaxial rotor; induced power interference\\ factor\end{tabular}  \\ \cline{2-4}
+                       &    obj.coax.rd     &    \%    &   Coaxial rotor; contraction radius  \\ \cline{2-4}
+                       &    obj.cost.perkgmtow     &    USD    &   Vehicle cost per kg  \\ \cline{2-4}
+                       &    obj.cost.avionics     &    USD    &   Avionics cost  \\ \cline{2-4}
                        &    obj.perf.nc     &    -    &   Cruise efficiency  \\ \cline{2-4}
                        &    obj.perf.nh     &    -    &   Hover efficiency  \\ \cline{2-4}
                        &    obj.perf.LoDclimb     &    -    &   Lift over drag - Climb  \\ \cline{2-4}
@@ -346,8 +346,8 @@ This same energy calculation can also be used to determine the energy requiremen
                        &    modelrotor(1).kappa     &    -    &   single rotor induced power factor (Leishman)  \\ \cline{2-4}
                        &    modelrotor(1).blades.cl\_alpha     &    /\degree    &   Lift curve slope  \\ \cline{2-4}
                        &    modelrotor(1).blades.Cd0     &    -    &   Rotor blade profile drag  \\ \cline{2-4}
-                       &    modelrotor(1).blades.D1     &    -    &   XXX  \\ \cline{2-4}
-                       &    modelrotor(1).blades.D2     &   -    &   XXX  \\ \cline{2-4}
+                       &    modelrotor(1).blades.D1     &    -    &   Quadratic coefficient drag curve  \\ \cline{2-4}
+                       &    modelrotor(1).blades.D2     &   -    &   Linear coefficient drag curve  \\ \cline{2-4}
                        &    modelrotor(1).blades.pitch\_deg     &    \degree    &   Rotor blade pitch  \\ \Xhline{2\arrayrulewidth}
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Variable}}}}  
                        &    obj.max\_dim     &    m    &   Vehicle maximum dimension (any direction) \\ \cline{2-4}
@@ -544,7 +544,10 @@ Currently, it is being used only in hover, but for proper optimization it will h
 
 \subsection{Vehicle Noise}
 
-The noise tool implemented for this stage of the project is based on \cite{Brown2018}, which presents a procedure for estimating harmonic
+The noise tool implemented for this stage of the project is based on \cite{Brown2018}, which presents a procedure for estimating harmonic and vortex noise for a rotorcraft in hover.
+
+
+
 
 \paragraph{Limitations}
 

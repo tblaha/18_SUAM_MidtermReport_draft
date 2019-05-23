@@ -36,9 +36,10 @@
 \vspace{8pt}%
 }
 
-
+\usepackage{imakeidx}
 \usepackage[acronym]{glossaries}
-\makeglossaries
+\makenoidxglossaries
+
 \input{Chapters/Abbreviations.tex}
 
 
@@ -132,9 +133,10 @@ by
 \input{Chapters/Nomenclature.tex}
 \printnomenclature
 
+\glsaddall
+\printnoidxglossary[type=\acronymtype,  title=List of Abbreviations]
+\printacronyms
 
-\printglossary
-\printglossary[type=\acronymtype, title=List of Abbreviations]
 
 \mainmatter
 
@@ -147,6 +149,7 @@ by
 \input{Chapters/CriteriaTools.tex}
 \input{Chapters/DesignSpace.tex}
 \input{Chapters/TradeOff.tex}
+\input{Chapters/Sensitivity.tex}
 \input{Chapters/ProjectLogic.tex}
 \input{Chapters/Conclusion.tex}
 
