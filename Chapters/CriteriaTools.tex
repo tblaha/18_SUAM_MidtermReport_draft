@@ -168,6 +168,7 @@ A numerical representation of the systems is the foundation of the tools outline
 
 \begin{table}[H]
 \centering
+\captionsetup{justification=centering}
 \caption{Operational inputs}
 \label{OperationalIn}
 \begin{tabular}{|c|c|c|l|}
@@ -211,6 +212,7 @@ A numerical representation of the systems is the foundation of the tools outline
 
 \begin{table}[H]
 \centering
+\captionsetup{justification=centering}
 \caption{Atmosphere inputs}
 \label{AtmosphereIn}
 \begin{tabular}{|c|c|c|l|}
@@ -322,6 +324,7 @@ This same energy calculation can also be used to determine the energy requiremen
 
 \begin{table}[H]
 \centering
+\captionsetup{justification=centering}
 \caption{Vehicle inputs}
 \label{VehicleIn}
 \begin{tabular}{|c|c|c|l|}
@@ -545,6 +548,12 @@ Currently, it is being used only in hover, but for proper optimization it will h
 The noise tool implemented for this stage of the project is based on \cite{Brown2018}, which presents a procedure for estimating harmonic and vortex noise for a rotorcraft in hover.
 
 
+\paragraph{Harmonic Noise} is also referred to as rotational or tonal noise and can be divided into loading noise, which is a direct consequence of thrust generation, and thickness noise, caused by finite rotor blade thickness. Appendix C in \cite{Brown2018} derives the Gutin and Deming formulae in equivalent-radius form. They are presented here in final form for brevity:
+
+\begin{align}
+    p_{m_L} = \frac{mB\}{}
+\end{align}
+
 
 
 \paragraph{Limitations}
@@ -558,7 +567,7 @@ The noise tool implemented for this stage of the project is based on \cite{Brown
  
 \paragraph{Verification}
 
-A thorough verification as done for the BEMT tool could not be performed due to time constraints. However, the article that the tool is based on does provide the parameters of the vehicles in the study and their noise signature, which will be used in the future to verify the accuracy of the tool. That being said, the outputs of the tool have realistic magnitudes and seem to behave
+A thorough verification as done for the BEMT tool could not be performed due to time constraints. However, the article that the tool is based on does provide the parameters of the vehicles in the study and their noise signature, which will be used in the future to verify the accuracy of the tool. That being said, the outputs of the tool have realistic magnitudes and seem to behave as expected. For instance, the sensitivities of MTOW and noise always show that the noise increases when the MTOW increases, which is intuitively logical and can be extracted from the equations presented above. For vehicles with rotors that have low fundamental frequencies the noise footprint in dBA is lower than in dB, which also makes sense if one looks at the A-weighting curve which peaks at around 3 Hz. Many more of these sanity checks have been performed during tool integration and show up in the sensitivity studies. However, due to report space constraints, the plots for these sensitivities are not shown.
 
 
 Sensitivity on Re (integration assumption)

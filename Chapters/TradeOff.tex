@@ -7,7 +7,7 @@
 In this chapter, an overview of the trade off of concepts will be presented. Firstly, a set of concepts in three different passenger range categories will be created. A preliminary trade off of these concepts using only the quantitative parameters will be performed, in order to choose a winning concept from each passenger range that will enter the final trade-off. For this, the tool will be used to compute some useful outputs. The final trade-off, that follows after that, will then evaluate the full set of quantitative and qualitative parameters of the concepts, in order to choose the winning concept. In the final trade-off use will be made of the trade criteria defined in \autoref{CriteriaTools}, including the weighting factors found previously. 
 
 \section{Design Definitions}
-In order to evaluate each design concept using the tools, some basic parameters including MTOW, cruise speed, range and OEW/MTOW ratio, must be determined. Since many concepts are novel, they are compared to existing vehicles to determine if the combination of parameters are realistic. In \autoref{fig:MTOW-Pax2} and \autoref{fig:Cruise-MTOW2}, the same statistical plots from \autoref{stats} are given with the concepts included as light-blue diamonds. In the case of MTOW and cruise speed, they fall within realistic margins as shown in \autoref{fig:MTOW-Pax2} and \autoref{fig:Cruise-MTOW2} respectively. The range of many of the concepts was reduced from the maximum available, which results in lower battery mass. This accounts for some difference from statistics, but still results in a feasible design. This is done to better suit the market needs.
+In order to evaluate each design concept using the tools, some basic parameters including MTOW, cruise speed, range and OEW/MTOW ratio, must be determined. Since many concepts are novel, they are compared to existing vehicles to determine if the combination of parameters are realistic. In \autoref{fig:MTOW-Pax2} and \autoref{fig:Cruise-MTOW2}, the same statistical plots from \autoref{stats} are given with the concepts included as light-blue diamonds. In the case of MTOW and cruise speed, they fall within realistic margins as shown in \autoref{fig:MTOW-Pax2} and \autoref{fig:Cruise-MTOW2} respectively. The range of many of the concepts was reduced from the maximum available, which results in lower battery mass. This accounts for some difference from statistics, but still results in a feasible design. This is done to better suit the market needs. Moreover, all the designed concepts use the same battery, which has a battery energy density of 260 $Wh/kg$ and a battery power density of 2100 $W/kg$.
 
 \begin{figure}[H]
 \begin{subfigure}[t]{0.5\textwidth}
@@ -81,8 +81,8 @@ OEW/MTOW           &          0.45          &         0.40          &           
 \# Passengers {[}-{]}                    &          2          &         2           &             2       \\
 Range {[}km{]}                           &          60          &         60     &            60        \\
 Max Dimension {[}m{]}                    &         5.75           &          5          &            6        \\
-Battery Energy density {[}Wh/kg{]}       &           260         &       260  &            260        \\
-Battery Power density {[}W/kg{]}         &           2100         &      2100 &            2100        \\
+%Battery Energy density {[}Wh/kg{]}       &           260         &       260  &            260        \\
+%Battery Power density {[}W/kg{]}         &           2100         &      2100 &            2100        \\
 L/D {[}-{]}                              &           17         &        12            &           16         \\
 Radius of rotors (x number of rotors) &   0.75 (1x) \& 0.4 (2x) \& 0.5 (2x)                &    0.85 (2x) \& 0.8 (2x)&            0.85 (x4)       \\
 Cruise Velocity {[}m/s{]}                &          42          &        32            &            37        \\ \bottomrule
@@ -178,8 +178,8 @@ OEW/MTOW           & 0.35                   & 0.35                   & 0.35     
 \# Passengers {[}-{]}                    & 4                   &  4                  & 6                   \\
 Range {[}km{]}                           & 54                   &  60                  & 45                    \\
 Max Dimension {[}m{]}                    & 9                   & 10                    & 9                   \\
-Battery Energy density {[}Wh/kg{]}       & 260                   & 260                    & 260                      \\
-Battery Power density {[}W/kg{]}         & 2100                   & 2100                   &     2100                \\
+%Battery Energy density {[}Wh/kg{]}       & 260                   & 260                    & 260                      \\
+%Battery Power density {[}W/kg{]}         & 2100                   & 2100                   &     2100                \\
 L/D {[}-{]}                              & 17                   & 15                   & 4                    \\
 Radius of rotors (x number of rotors)      & 0.15 (x36)           & 1 (x4); 1.5 (x1); 0.7 (x2) & 1.5 (x8)                    \\
 Cruise Velocity {[}m/s{]}                & 60                   & 82                    & 34                    \\ \bottomrule
@@ -210,7 +210,7 @@ After designing the different vehicles a trade-off has been done to come up with
 Vertiport Area {[}m\textsuperscript{2}{]}    & 1620                   & 2870                   & 1620                    \\
 Total System Area {[}km\textsuperscript{2}{]}& 1.36                   & 1.55                   & 1.42                   \\
 Total Board Time {[}s{]}                     & 300                    & 300                   & 390                   \\
-rplNoise {[}dBA{]}                              & 110                   & 74                   & 90                    \\
+Noise {[}dBA{]}                              & 110                   & 74                   & 90                    \\
 Downwash {[}m/s{]}                              &             96       &     33          &          26        \\\bottomrule
 \end{tabular}
 \end{table}
@@ -269,8 +269,8 @@ OEW/MTOW           &        45            &           45         &      40      
 \# Passengers {[}-{]}                    &        21            &        20            &       20             \\
 Range {[}km{]}                           &        60            &        60            &           20         \\
 Max Dimension {[}m{]}                    &          18         &        18            &          16          \\
-Battery Energy density {[}Wh/kg{]}       &         260            &     260               &       250             \\
-Battery Power density {[}W/kg{]}         &           2100        &        2100            &         2500           \\
+%Battery Energy density {[}Wh/kg{]}       &         260            &     260               &       250             \\
+%Battery Power density {[}W/kg{]}         &           2100        &        2100            &         2500           \\
 L/D {[}-{]}                              &         8.0           &        13            &     2               \\
 Radius of rotors (x number of rotors)  &           2.5 (x4)         &   1.85 (x4), 0.85 (x4)                 &     6 (1x)               \\
 Cruise Velocity {[}m/s{]}                &          83          &        111           &  42                 \\ \bottomrule
@@ -302,7 +302,7 @@ As mentioned before, the inputs that were specified in the previous section are 
 Vertiport Area {[}m\textsuperscript{2}{]}    &           5700         &        5700         &        4600              \\
 Total System Area {[}km\textsuperscript{2}{]} &       3.23             &      3.12           &       2.94               \\
 Total Board Time {[}s{]}                     & 1065                   &     1020            &      1020                \\
-Noise {[}dBA{]}                              &           90        &      90           &       94                  \\
+Noise {[}dBA{]}                              &           89        &      89           &       94                  \\
 Downwash {[}m/s{]}                              &             45       &     48          &  --   \\ \bottomrule
 \end{tabular}
 
@@ -330,13 +330,13 @@ Now that the most feasible options for each vehicle passenger range have been se
 MTOW {[}kg{]}                         & 575                   &    971              & 7418                \\
 OEW/MTOW        & 0.40                    &   0.35          & 0.45                  \\
 \# Passengers {[}-{]}                 & 2                     &      4            & 20                  \\
-Range {[}km{]}                        & 60                    &                  & 60                  \\
-Max Dimension {[}m{]}                 & 5                     &                  & 18                  \\
-Battery Energy density {[}Wh/kg{]}    & 260                &                  & 260               \\
-Battery Power density {[}W/kg{]}      & 2100               &                  & 2100              \\
-L/D {[}-{]}                           & 12                    &                  & 13                  \\
-Radius of rotors (x number of rotors) & 0.85 (2x) \& 0.8 (2x) &                  & 2.5 (x4), 0.85 (x4) \\
-Cruise Velocity {[}m/s{]}             & 32                    &                  & 111.1               \\ \hline
+Range {[}km{]}                        & 60                    &       60           & 60                  \\
+Max Dimension {[}m{]}                 & 5                     &      10            & 18                  \\
+%Battery Energy density {[}Wh/kg{]}    & 260                &      260            & 260               \\
+%Battery Power density {[}W/kg{]}      & 2100               &          2100        & 2100              \\
+L/D {[}-{]}                           & 12                    &       15           & 13                  \\
+Radius of rotors (x number of rotors) & 0.85 (2x) \& 0.8 (2x) &    1 (x4); 1.5 (x1); 0.7 (x2)             & 2.5 (x4), 0.85 (x4) \\
+Cruise Velocity {[}m/s{]}             & 32                    &        82          & 111.1               \\ \hline
 \end{tabular}
 \end{table}
 
@@ -347,16 +347,18 @@ Cruise Velocity {[}m/s{]}             & 32                    &                 
 \begin{tabular}{llll}
 \hline
 \textbf{Parameter}                          & \textbf{1-2 pax} & \textbf{4-6 pax} & \textbf{20+ pax} \\ \hline
-\# Vehicles {[}-{]}                         & 12900             &                  & 1230             \\
-\# Pads {[}-{]}                             & 1620             &                  & 491              \\
-\# Trips/day {[}-{]}                        & 308000           &                  & 19298            \\
-\# PREE {[}Wh/(pax-km){]}                   & 790           &                  & 1406.0           \\
-\# Ticket price per kilometre {[}\$/(km){]} & 4.12             &                  & 9.36             \\
-\# Passengers/day {[}-{]}                   & 32700           &                  & 202758           \\
-Vertiport Area {[}m\textsuperscript{2}{]}   & 630            &                  & 5699             \\
-Total System Area {[}km\textsuperscript{2}  & 1.48          &                  & 2793200          \\
-Total Board Time {[}s{]}                    & 210              &                  & 1020             \\
-Noise {[}dBA{]}                             & 71             &                  & 84.5             \\ \hline
+\# Vehicles {[}-{]}                         & 12900             &     3350             & 1500             \\
+\# Pads {[}-{]}                             & 1620             &        800          & 550              \\
+\# Trips/day {[}-{]}                        & 308000           &       124000           & 26000            \\
+\# PREE {[}Wh/(pax-km){]}                   & 790           &        670          & 1230           \\
+\# Ticket price per kilometre {[}\$/km{]} & 2.34             &    3.85              & 7.84             \\
+\# Ticket price per kilometre {[}\$/km - pad costs{]} & 0.62             &    0.42              & 0.59             \\
+\# Passengers/day {[}-{]}                   & 32700           &     269000             & 259000           \\
+Vertiport Area {[}m\textsuperscript{2}{]}   & 630            &     2870             & 5700             \\
+Total System Area {[}km\textsuperscript{2}  & 1.01          &       1.55           & 3.12          \\
+Total Board Time {[}s{]}                    & 210              &        300          & 1020             \\
+Noise {[}dBA{]}                             & 71             &       74           & 89             \\ 
+Downwash [m/s]                              & 51            &       33              &   48      \\ \hline
 \end{tabular}
 \end{table}
 
@@ -373,4 +375,23 @@ Naturally, this list of quantitative parameters is not the complete picture. The
 
 As can be seen from the table concept XXX is the winner. This will be the concept that will be further worked out in the final phase of the project. 
 
+
+\section{Risk map}
+Some of the more crucial risks have been identified an are listed below. 
+
+\begin{enumerate}
+    \item The structural percentage is underestimated. This results in a higher structural mass; this snowballs in a higher MTOW
+    \item ATM system not developed yet in order to accomodate UAM system
+    \item Noise levels are too high to for the system to be implemented in an urban environment 
+    \item The concept is not economically feasible 
+    \item The technology needed to fly the vehicles autonomously is not mature enough yet
+    \item Society not yet confident in level of safety of UAM system.
+    \item The manufacturing process and materials needed for the system is not sustainable
+    \item No improvement in battery charge rate density is realized. This will increase the charge time of the aircraft
+    \item The number of charge/discharge cycles for batteries is not commensurate with the life time of the vehicle
+    \item The airspace available for a fleet of UAM vehicles is too constraining 
+    \item The regulations in 2050 do not allow the usage of UAM vehicles yet
+\end{enumerate}
+
+For several of these 
 

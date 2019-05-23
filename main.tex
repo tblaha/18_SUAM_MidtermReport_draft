@@ -25,8 +25,7 @@
 \usepackage{ltxtable, lscape}
 \usepackage[final]{pdfpages}
 
-
-\renewcommand{\nomname}{\huge{\sffamily \vspace{-40mm}}\addcontentsline{toc}{section}{Nomenclature}}
+\renewcommand{\nomname}{\huge{\sffamily Nomenclature}\addcontentsline{toc}{section}{Nomenclature}}
 
 \setlength{\nomitemsep}{0pt}
 
@@ -37,6 +36,7 @@
 ]%
 \vspace{8pt}%
 }
+\setlength{\nomitemsep}{-0.7\parsep}
 
 \usepackage{imakeidx}
 \usepackage[acronym]{glossaries}
@@ -54,16 +54,12 @@
 \usepackage[titles]{tocloft}
 \setcounter{tocdepth}{1} % instead of 2
 \renewcommand{\cftbeforetoctitleskip}{-70mm}
-\renewcommand\cftchapafterpnum{\vskip{0pt}}
-\renewcommand\cftsecafterpnum{\vskip{0pt}}
-
+%\renewcommand\cftchapafterpnum{\vskip}
+%\renewcommand\cftsecafterpnum{\vskip}
 
 
 
 \begin{document}
-
-
-
 
 
 
