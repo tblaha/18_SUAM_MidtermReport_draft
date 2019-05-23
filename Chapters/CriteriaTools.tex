@@ -28,7 +28,7 @@ Each of the important aspects of the solution highlighted above can be assessed 
 
 \begin{itemize}
     \item \underline{Energy demand/pax/km/day (PREE)}: This reflects the energy consumption of the system to be able to operate the vehicles for an entire day. It is normalized by passengers since a system that transports more passengers and consumes a proportionally higher amount of energy is not necessarily worse than a system which transports less passengers and consumes less amount of energy (the commuters that the latter system is not serving will have to be transported anyway). The energy is also normalized by kilometers since this allows us to compare how the different mobility systems perform with respect to existing transport modes. Energy usage will scale with travelled distance for all transport modes.  %Total energy consumption of the system is however a very important parameter to quantify the ecological sustainability of the system (and as will be seen later, it will also impact the cost of the system).
-    \item \underline{Battery mass}: It is hard to foresee the development of battery chemistries up until 2050. As it stands today, however, batteries used in the car industry rely on rare Earth metals such as Lithium and Cobalt, which could become scarce by 2050 \footnote{\url{https://www.hannovermesse.de/en/news/raw-materials-for-lithium-ion-batteries-are-running-out-83008.xhtml} [accessed 15-05-2019]}. Batteries are also well known for being poorly recyclable, making it the least ecologically sustainable component in the vehicle. By multiplying the mass of batteries in each vehicle times the vehicles in the fleet, the total battery mass of the system can be calculated.
+    \item \underline{Battery mass}: It is hard to foresee the development of battery chemistries up until 2050. As it stands today, however, batteries used in the car industry rely on rare Earth metals such as Lithium and Cobalt, which could become scarce by 2050 \footnote{\url{https://www.hannovermesse.de/en/news/raw-materials-for-lithium-ion-batteries-are-running-out-83008.xhtml} [accessed 15.05.19]}. Batteries are also well known for being poorly recyclable, making it the least ecologically sustainable component in the vehicle. By multiplying the mass of batteries in each vehicle times the vehicles in the fleet, the total battery mass of the system can be calculated.
     
 \end{itemize}
 
@@ -135,9 +135,9 @@ In \autoref{AHPtable} the weights of the criteria are shown. The individual weig
 \caption{Weightsof the criteria and sub-criteria}
 \label{AHPtable}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{l|l|c|c}
+\begin{tabular}{|l|l|c|c|}
 \hline
-\multicolumn{1}{c|}{\textbf{Criteria (weight)}}      & \multicolumn{1}{c|}{\textbf{Sub-criteria}} & \textbf{Individual weight}     & \textbf{Total weight}    \\ \hline
+\multicolumn{1}{|c|}{\textbf{Criteria (weight)}}      & \multicolumn{1}{c|}{\textbf{Sub-criteria}} & \textbf{Individual weight}     & \textbf{Total weight}    \\ \hline
 \multirow{2}{*}{\textbf{\begin{tabular}[l]{@{}l@{}}Ecological Sustainability\\ (0.36)\end{tabular}}} & Energy demand/hour                & 0.781                 & 0.278                 \\ \cline{2-4} 
                                                                                         & Battery mass  & 0.219                 & 0.078  \\ \hline
 \multirow{4}{*}{\textbf{\begin{tabular}[l]{@{}l@{}}Social Acceptance \\ (0.31)\end{tabular}}} & Safety               & 0.593                      & 0.185                      \\ \cline{2-4} 
@@ -250,8 +250,8 @@ Various tools require certain vehicle parameters as input, including the number 
     \caption{Comparison of maximum range versus the MTOW of known electric eVTOL vehicles in development.}
     \label{fig:MTOW-Range}
 \end{subfigure}
-\captionsetup{justification=centering}
-\caption{Verification of data accuracy}
+%\captionsetup{justification=centering}
+%\caption{Verification of data accuracy}
 \label{fig:MTOW-stats}
 \end{figure}
 
@@ -260,7 +260,7 @@ Using statistical methods, some relationships can be derived from the data regar
 As shown in \autoref{fig:MTOW-Pax}, the MTOW increases with payload (passengers). The significance of this relation has a p-value of $6\cdot10^{-6}$ which is enough to reject the null hypothesis that there is no relationship (the data is available in \autoref{ap:eVTOL}). An analysis of variance (ANOVA) test regarding the co-variables of cruise speed, range and configuration show that the majority of the relation does come from the passenger capacity. For determining a realistic MTOW of each vehicle in the trade-off, the relation derived is a weight of 316 kg for a single passenger vehicle, and then 390 kg for each additional passenger.
 
 There is also a clear difference depending on configuration. Specifically multi-copter and helicopter  arrangements require less mass, which is logical, as they have lower disk loading. This same relation extends to the cruise speed. While hover efficiency increases with decreasing disk loading, the cruise speed is also lower. In \autoref{fig:Cruise}, an average regression is given in black, as well as a fit for tilt-wing, fixed-wing and multi-rotorcraft. %Interestingly, the 4 passenger rotor point (pink plus), is a modified electric Robinson R44 helicopter\footnote{\url{http://evtol.news/aircraft/tier-1-robinson-r44/} [accessed on 15 May, 2019]}, which seems to fit with the multi-rotorcraft curve. 
-The Carter Aviation Electric Air Taxi Concept\footnote{\url{http://www.cartercopters.com/pdfs/Carter_Electric_Air_Taxi.pdf} [accessed on 15 May, 2019]} (marked in \autoref{fig:Cruise-MTOW}), which features a rotor and a fixed-wing, thus it could fall into the fixed-wing category as well.
+The Carter Aviation Electric Air Taxi Concept\footnote{\url{http://www.cartercopters.com/pdfs/Carter_Electric_Air_Taxi.pdf} [accessed 15.05.19]} (marked in \autoref{fig:Cruise-MTOW}), which features a rotor and a fixed-wing, thus it could fall into the fixed-wing category as well.
 
 The relation between cruise and MTOW is also significant (p=0.0086), but is effected strongly by the configuration (p=0.00056). The relation of range to MTOW is also somewhat significant (p=0.025), where greater MTOW leads to greater range. The configuration has a large impact on the range as well (p=0.0196), as can be seen in \autoref{fig:MTOW-Range}. When comparing these electric aircraft to comparable hybrid or gasoline, the range is much lower. It is also impacted greatly by battery energy density. The effect of improved energy density is considered as technology is likely to improve by 2050.
 
@@ -342,14 +342,14 @@ This same energy calculation can also be used to determine the energy requiremen
                        &    veh.perf.LoDclimb     &    -    &   Lift over drag - Climb  \\ \cline{2-4}
                        &    veh.bat.max\_ops\_charge     &    -    &   Maximum charge level during operations  \\ \cline{2-4}
                        &    veh.bat.min\_ops\_charge     &    -    &   Minimum charge level during operations  \\ \cline{2-4} 
-                       &    prop.unit.propunit.axialvel     &    m/s    &   Rotor axial velocity  \\ \cline{2-4}
-                       &    prop.unit.rotor(1).solidity     &    -    &   Rotor blade solidity  \\ \cline{2-4}
-                       &    prop.unit.rotor(1).kappa     &    -    &   single rotor induced power factor (Leishman)  \\ \cline{2-4}
-                       &    prop.unit.rotor(1).blades.cl\_alpha     &    /\degree    &   Lift curve slope  \\ \cline{2-4}
-                       &    prop.unit.rotor(1).blades.Cd0     &    -    &   Rotor blade profile drag  \\ \cline{2-4}
-                       &    prop.unit.rotor(1).blades.D1     &    -    &   Quadratic coefficient drag curve  \\ \cline{2-4}
-                       &    prop.unit.rotor(1).blades.D2     &   -    &   Linear coefficient drag curve  \\ \cline{2-4}
-                       &    prop.unit.rotor(1).blades.pitch\_deg     &    \degree    &   Rotor blade pitch  \\ \Xhline{2\arrayrulewidth}
+                       &    propunit.propunit.axialvel     &    m/s    &   Rotor axial velocity  \\ \cline{2-4}
+                       &    propunit.rotor(1).solidity     &    -    &   Rotor blade solidity  \\ \cline{2-4}
+                       &    propunit.rotor(1).kappa     &    -    &   single rotor induced power factor (Leishman)  \\ \cline{2-4}
+                       &    propunit.rotor(1).blades.cl\_alpha     &    /\degree    &   Lift curve slope  \\ \cline{2-4}
+                       &    propunit.rotor(1).blades.Cd0     &    -    &   Rotor blade profile drag  \\ \cline{2-4}
+                       &    propunit.rotor(1).blades.D1     &    -    &   Quadratic coefficient drag curve  \\ \cline{2-4}
+                       &    propunit.rotor(1).blades.D2     &   -    &   Linear coefficient drag curve  \\ \cline{2-4}
+                       &    propunit.rotor(1).blades.pitch\_deg     &    \degree    &   Rotor blade pitch  \\ \Xhline{2\arrayrulewidth}
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Variable}}}}  
                        &    veh.max\_dim     &    m    &   Vehicle maximum dimension (any direction) \\ \cline{2-4}
                        &    veh.pax     &    people    &   Pax capacity vehicle \\ \cline{2-4}
@@ -365,9 +365,9 @@ This same energy calculation can also be used to determine the energy requiremen
                        &    propunit.usage     &    -    &   Propulsion unit usage  \\ \cline{2-4}
                        &    propunit.config     &    -    &   Rotor configuration in propulsion unit  \\ \cline{2-4}
                        &    propunit.T\_percent\_hov     &    \%    &   \begin{tabular}[c]{@{}l@{}}Percentage of hover taken up by a propulsion\\ unit\end{tabular}  \\ \cline{2-4}
-                       &    prop.unit.rotor(1).blades.num     &    -    &   Number of blades per rotor  \\ \cline{2-4}
-                       &    prop.unit.rotor(1).radius     &    m    &   Rotor radius  \\ \cline{2-4}
-                       &    prop.unit.rotor(1).omega     &    rad/s    &   Rotor radial velocity  \\ \Xhline{2\arrayrulewidth}
+                       &    propunit.rotor(1).blades.num     &    -    &   Number of blades per rotor  \\ \cline{2-4}
+                       &    propunit.rotor(1).radius     &    m    &   Rotor radius  \\ \cline{2-4}
+                       &    propunit.rotor(1).omega     &    rad/s    &   Rotor radial velocity  \\ \Xhline{2\arrayrulewidth}
 \end{tabular}
 \end{table}
 
@@ -575,7 +575,7 @@ Human ears have different responses at different frequencies. When it comes to s
 
 \paragraph{Atmospheric Attenuation}
 
-On top of the procedure for noise prediction outlined in \cite{Brown2018}, a model for atmospheric attenuation based on frequency of emitted sound and atmospheric parameters was implemented\footnote{\url{ https://en.wikibooks.org/wiki/Engineering_Acoustics/Outdoor_Sound_Propagation} accessed on 20/05/2019.}.
+On top of the procedure for noise prediction outlined in \cite{Brown2018}, a model for atmospheric attenuation based on frequency of emitted sound and atmospheric parameters was implemented\footnote{\url{ https://en.wikibooks.org/wiki/Engineering_Acoustics/Outdoor_Sound_Propagation} [accessed on 20/05/2019]}.
 
 
 
@@ -593,7 +593,7 @@ On top of the procedure for noise prediction outlined in \cite{Brown2018}, a mod
 A thorough verification as done for the BEMT tool could not be performed due to time constraints. However, the article that the tool is based on does provide the parameters of the vehicles in the study and their noise signature, which will be used in the future to verify the accuracy of the tool. That being said, the outputs of the tool have realistic magnitudes and seem to behave as expected. For instance, the sensitivities of MTOW and noise always show that the noise increases when the MTOW increases, which is intuitively logical and can be extracted from the equations presented above. For vehicles with rotors that have low fundamental frequencies the noise footprint in dBA is lower than in dB, which also makes sense if one looks at the A-weighting curve which peaks at around 3 Hz. Many more of these sanity checks have been performed during tool integration and show up in the sensitivity studies. However, due to report space constraints, the plots for these sensitivities are not shown.
 
 
-Sensitivity on Re (integration assumption)
+%Sensitivity on Re (integration assumption)
 
 
 
@@ -689,7 +689,7 @@ From the more detailed market study of Los Angeles (\autoref{quantmarket}) a set
 
 
 \paragraph{Trip selection}
-
+\label{subsec:tripselect}
 All known trips are sorted in descending order by metric \ref{eq:gainmetric} and stored in a table. The cumulative sum of the gain metric is defined as equation \ref{eq:gainsum}, with $0\leq n\leq N$ where $N$ is the total number of distinct trips available in the dataset. When a value for $n$ is selected, these top trips can be used as the design input for the system.
 
 \begin{align} \label{eq:gainsum}
@@ -755,7 +755,7 @@ This puts a preliminary throughput requirement on the throughput of a set of PUM
 
 Since only $40\ 000$ of Google Maps API Directions queries were available free of charge from Google and $14\ 000$ are needed, care must be taken to verify the queries before issuing them to mitigate the risk of using up the queries accidentally without obtaining useful results. This was done by requesting the same information for a few randomly chosen trips manually on \url{www.google.com/maps} and via the API from MATLAB. After this succeeded and the information was confirmed to be identical, the integration was checked by using the final input and output files, but limiting the trips to 5 at random. Following this, a dry run was performed by formulating all queries and writing the output files as before, but without actually invoking the API. 
 
-After enough confidence was established, the program ran in around 2 hours. However, when evaluating the average time loss due to traffic, the percentage (33\% of average trip time added) did not match the TomTom traffic index \footnote{\url{https://www.tomtom.com/en_gb/trafficindex/city/los-angeles}} which reports 62\% for the morning peak in 2016 (with an upwards trend in the recent years), at the same time of day as predicted by this algorithm (8am to 9am). To investigate this, the traffic model that Google provides was configured from "best-estimate" to "pessimistic". The $14\ 000$ items query was run again, resulting in FINISH THIS SENTENCE
+After enough confidence was established, the program ran in around 2 hours. However, when evaluating the average time loss due to traffic, the percentage (33\% of average trip time added) did not match the TomTom traffic index \footnote{\url{https://www.tomtom.com/en_gb/trafficindex/city/los-angeles} [accessed 21.05.19]} which reports 62\% for the morning peak in 2016 (with an upwards trend in the recent years), at the same time of day as predicted by this algorithm (8am to 9am). To investigate this, the traffic model that Google provides was configured from "best-estimate" to "pessimistic". This will have a positive effect on the similarity to the TomTom data, and gives a more realistic view on the trip time loss in peak hours.
 
 To verify the flux calculations, a shortened trip definitions file was created and the fluxes manually computed for the low amount of trips. This was compared and confirmed to match with the scripted calculations and also associativity with the GEOIDS (specificing the location within LA country) was confirmed to be kept. Although not shown here for bevity, these unit testing files are available from us on request.
 
@@ -838,7 +838,7 @@ Another input to this subtool is the $\zeta$ factor which indicates the fraction
 
 For any system, whether it is on-demand or scheduled, it must be taken into consideration that not every trip is served with full passenger payload. For the sake of simplicity, it is assumed throughout that each trip that a vehicle undertakes it is either fully loaded with passenger payload ("revenue flight") or is empty ("zombie flight") with only crew remaining, if applicable.
 
-It proved difficult to include models of different ATM systems in the tools. This could have either been done by assuming a predefined zombie flight ratio and estimating this for different ATM concepts; however, not reliable or supported way of doing so could be determined. Another, more direct way would be to run an agent based simulation and optimise the trips based on demand, routes and the current vehicle positions and trajectories. \footnote{\url{https://www.bauhaus-luftfahrt.net/fileadmin/user_upload/2018_AIAA_Aviation_Rothfeld_Agent-based_UAM.pdf}} This, however, is outside the scope of this concept selection phase and so it was chosen to look at a hub to hub system for fleet size and ground structure estimation, while realising that certain vehicles concepts may benefit from one choice over the other. Therefore, the next section \ref{subsec:GateThroughput} takes different system choices into account, providing insights that help with the trade-off.
+It proved difficult to include models of different ATM systems in the tools. This could have either been done by assuming a predefined zombie flight ratio and estimating this for different ATM concepts; however, not reliable or supported way of doing so could be determined. Another, more direct way would be to run an agent based simulation and optimise the trips based on demand, routes and the current vehicle positions and trajectories. \footnote{\url{https://www.bauhaus-luftfahrt.net/fileadmin/user_upload/2018_AIAA_Aviation_Rothfeld_Agent-based_UAM.pdf} [accessed 21.05.19]} This, however, is outside the scope of this concept selection phase and so it was chosen to look at a hub to hub system for fleet size and ground structure estimation, while realising that certain vehicles concepts may benefit from one choice over the other. Therefore, the next section \ref{subsec:GateThroughput} takes different system choices into account, providing insights that help with the trade-off.
 
 For the subsequent calculations it is assumed that every vehicle only goes back and forth between 2 hubs. The number of trips per unit of time $\Psi$ on a certain route $i$ is governed by the maximum of the passengers $pax$ on that route $R$ or its the inverse route $\bar{R}$ times two, see \autoref{eq:RouteFlow}. The metric $veh_{pax}$ indicates how many passengers can be carried by one vehicle. There are $m$ unique routes pairs (a pair is a route and its inverse) to iterate over.
 
@@ -876,7 +876,7 @@ For each trip at each of the 5 discrete time slots the required vehicle energy, 
 
 \paragraph{Fleet Sizing}
 
-Now that the total number of trips on every route is known per unit of time (hour), the fleet size can be approximated if it is known how long vehicle takes to complete one flight cycle (take-off to take-off), summing over all chosen route. This time is approximated as the sum of air time $AT$, depending largely on the cruise speed and the turnaround time $TT$, depending on a boarding/deboarding/taxi constant, trip energy and charge rate (recharging is assumed to be performed before every flight for simplicity). More details on these time can be found in SECTION REFERENCE SOMETHING HERE as equation \autoref{eq:fleetsize}.
+Now that the total number of trips on every route is known per unit of time (hour), the fleet size can be approximated if it is known how long vehicle takes to complete one flight cycle (take-off to take-off), summing over all chosen route. This time is approximated as the sum of air time $AT$, depending largely on the cruise speed and the turnaround time $TT$, depending on a boarding/deboarding/taxi constant, trip energy and charge rate (recharging is assumed to be performed before every flight for simplicity). More details on these time can be found in \autoref{subsec:GateThroughput} as equation \autoref{eq:fleetsize}.
 
 Here, wind and vehicle maintenance during the daily service time is neglected. This overhead surely needs to be taken into account when sizing the fleet for the final system design, but this simplified metric should serve for concept selection as it adequately compares the differences in fleet sizes for different vehicle definitions.
 
@@ -920,7 +920,7 @@ First, some basic assumptions should be made about the boarding and \textit{turn
     \caption{The "turnaround" time of a vehicle accounts for all time on the ground. Charging/refueling can occur concurrently with boarding and inspection.\protect\footnotemark}
     \label{fig:turnaround}
 \end{figure}
-\footnotetext{Icons courtesy of Vahana - \url{https://github.com/VahanaOpenSource/iconography} \url{https://vahana.aero/urban-air-mobility-iconography-5ad4de1fbca0}}
+\footnotetext{Icons courtesy of Vahana - \url{https://github.com/VahanaOpenSource/iconography} [accessed 20.05-19] \url{https://vahana.aero/urban-air-mobility-iconography-5ad4de1fbca0} [accessed 20.05-19]}
 }
 
 In the event that charging takes longer than boarding, this is a lower limit on the turnaround time.
@@ -1018,7 +1018,7 @@ As said in the introduction of this subsection the throughput of a vertiport is 
     \item  \textbf{Pier topology} This topology is used for larger facilities. There are many TLOF pads and gates. This is the best configuration for vehicles with a longer turnaround time.
     \item \textbf{Remote apron topology} This topology has a TLOF pad located seperately of the gate. As a consequence the hovering/taxi time increases, however this topology supports simultaneous arrivals and departures on the TLOF pads.
 \end{enumerate}
-The combination of TLOF pads and gates is of great importance to increase the throughput. In a study the optimal gates with one TLOF pad is determined to be four or five to have the highest TLOF pad utilization\footnote{\url{https://pdfs.semanticscholar.org/243f/41d9ed601da27582f08d33426f80aa95f794.pdf}[accessed: 10-05-19]}. The design of a vertiport is determined by the dimensions of the vehicle. The tip-to-tip span of a vehicle determines the TLOF pads. Next to that, there are restrictions on the dimensions of vertiport designs. For the hover taxi and ground taxi route the minimum dimensions are 2 and 1.5 rotor diameters (tip-to-tip spans) of the design aircraft. In previous studies it has been concluded that ground taxi is recommended for a higher throughput. Moreover it is assumed that, "the gates have a diameter equal to the maximum vehicle dimension plus either 10 ft for ground taxi operations, or the greater of 10 ft or 1/3 rotor span for hover taxi operations\footnotemark[\value{footnote}]". A taxiroute may not come within 1/3 of the tip-to-span distance between the gates and taxiways. These restrictions will lead to complex design of the vertiport and should be optimized to create the highest throughput. In \autoref{fig:vertiport} the restricted dimensions are shown.
+The combination of TLOF pads and gates is of great importance to increase the throughput. In a study the optimal gates with one TLOF pad is determined to be four or five to have the highest TLOF pad utilization\footnote{\url{https://pdfs.semanticscholar.org/243f/41d9ed601da27582f08d33426f80aa95f794.pdf}[accessed: 10-05-19]}. The design of a vertiport is determined by the dimensions of the vehicle. The tip-to-tip span of a vehicle determines the TLOF pads. Next to that, there are restrictions on the dimensions of vertiport designs. For the hover taxi and ground taxi route the minimum dimensions are 2 and 1.5 rotor diameters (tip-to-tip spans) of the design aircraft. In previous studies it has been concluded that ground taxi is recommended for a higher throughput. Moreover it is assumed that, "the gates have a diameter equal to the maximum vehicle dimension plus either 10 ft for ground taxi operations, or the greater of 10 ft or 1/3 rotor span for hover taxi operations"\footnotemark[\value{footnote}]. A taxiroute may not come within 1/3 of the tip-to-span distance between the gates and taxiways. These restrictions will lead to complex design of the vertiport and should be optimized to create the highest throughput. In \autoref{fig:vertiport} the restricted dimensions are shown.
 
 \begin{figure}[H]
     \centering
@@ -1080,7 +1080,7 @@ In order to give appropriate importance to the particular criteria and sub-crite
 
 
 
-\subsection{Cost estimation}
+\subsection{Cost Estimation}
 The cost estimation for the system is an important aspect. For each system two types of costs are estimated, namely production costs and operational costs. Afterwards, these costs are combined and a break even point is determined. This is the point where the total costs are exactly the same as the incoming costs over a few years. If the break even point is known, the ticket price can be determined. 
 
 The production costs of the system are based on the production cost per vehicle, the avionics costs per vehicle, battery costs per vehicle and the costs to build a hub. The total production costs is then the sum of the vehicle related costs multiplied with the fleet size and the costs to build a hub multiplied with the number of hubs that will be created. Moreover, the operational costs are dependent on the amount of trips per vehicle. These costs are determined by power, maintenance, infrastructural and ground costs. The costs for some of these aspects can be adjusted for each system. If you decrease the amount of hubs, the infrastructural costs will decrease. These parameters can all be adjusted for each system. However, the labour costs are set values per hour found from literature. Nevertheless, the number of employees might differ for each system. 
@@ -1130,7 +1130,7 @@ Reserves            & 15                      \\ \bottomrule
 
 
 
-\section{Tool integration} 
+\section{Tool Integration} 
 \label{sec:toolintegration}
 
 After creating the tools presented above, they somehow needed to be integrated together so as to produce one umbrella tool (hereafter referred to as the tool) that any user could use easily. A flowchart of the tool can be found in the fold-out page below. 
@@ -1156,7 +1156,7 @@ Knowing the fleet size and the battery mass in every vehicle, a simple multiplic
 
 The total costs for production and operation of the system (including the hubs) up to the BEP, together with the number of passengers transported will be used to estimate a ticket price/pax/km.
 
-A calculation that also emerges from the Vehicle and Operational updated objects is the calculation of noise and downwash. The calculation of these figures is done in hover, and is heavily dependent on the thrust distribution across the different rotors in the vehicle. For modularity purposes, the function \texttt{defineConcepts.m} allows the user to specify different Propulsion Units (PUs). PUs consist of a set of rotors that have the same design parameters and operate in the same conditions. Key parameters to specify for each propulsion unit are the number of rotors in that propulsion unit, whether the rotors are operated in hover, cruise or both, the rotor configuration (single or coaxial) and the thrust that the unit provides in hover/total thrust. These parameters will be key drivers in the calculation of noise and downwash, which is computed for each PU separately and then summed across in an appropriate fashion. For instance, in the total noise computation, decibel arithmetic is used and no destructive interference between sources is assumed (which is valid if the sound source is emitted at different frequencies). In the downwash computation, a weighted average is calculated to find the downwash velocity of the device. It seemed reasonable to weigh the velocity of each propulsion unit by the air mass flow going through each.
+A calculation that also emerges from the Vehicle and Operational updated objects is the calculation of noise and downwash. The calculation of these figures is done in hover, and is heavily dependent on the thrust distribution across the different rotors in the vehicle. For modularity purposes, the function \url{defineConcepts.m} allows the user to specify different Propulsion Units (PUs). PUs consist of a set of rotors that have the same design parameters and operate in the same conditions. Key parameters to specify for each propulsion unit are the number of rotors in that propulsion unit, whether the rotors are operated in hover, cruise or both, the rotor configuration (single or coaxial) and the thrust that the unit provides in hover/total thrust. These parameters will be key drivers in the calculation of noise and downwash, which is computed for each PU separately and then summed across in an appropriate fashion. For instance, in the total noise computation, decibel arithmetic is used and no destructive interference between sources is assumed (which is valid if the sound source is emitted at different frequencies). In the downwash computation, a weighted average is calculated to find the downwash velocity of the device. It seemed reasonable to weigh the velocity of each propulsion unit by the air mass flow going through each.
 
 
 %on the vehicle configuration chosen load the database of trips
@@ -1173,7 +1173,7 @@ Evaluating one vehicle and operations concept design at a time quickly and with 
 
 \subsection{Workflow Design}
 
-The user sets $m$ input concepts and a list of $n$ inputs variables (listed in \autoref{AtmosphereIn} \autoref{VehicleIn} \autoref{OperationalIn}) to be perturbed within specified ranges and a list of $o$ outputs to be measured. The script evaluates all perturbations to the concepts and returns $o$ output files showing the relative change in the output parameters in $n$ plots (one for each perturbed input). Each plot contains $m$ lines; one for each concept.
+The user sets $m$ input concepts and a list of $n$ inputs variables (listed in \autoref{OperationalIn}, \autoref{AtmosphereIn} and \autoref{VehicleIn}) to be perturbed within specified ranges and a list of $o$ outputs to be measured. The script evaluates all perturbations to the concepts and returns $o$ output files showing the relative change in the output parameters in $n$ plots (one for each perturbed input). Each plot contains $m$ lines; one for each concept.
 
 The plots can be output using percentage changes for perturbation variables and/or output parameters or using the actual magnitudes or the metrics. Non-convergence of MTOW or BEMT for a certain input is treated as NaNs and those parts of the lines are not plotted.
 
