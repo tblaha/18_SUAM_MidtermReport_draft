@@ -551,9 +551,12 @@ The noise tool implemented for this stage of the project is based on \cite{Brown
 \paragraph{Harmonic Noise} is also referred to as rotational or tonal noise and can be divided into loading noise, which is a direct consequence of thrust generation, and thickness noise, caused by finite rotor blade thickness. Appendix C in \cite{Brown2018} derives the Gutin and Deming formulae in equivalent-radius form. They are presented here in final form for brevity:
 
 \begin{align}
-    p_{m_L} = \frac{mB\}{}
+    p_{m_L} = \frac{mB\Omega}{2\sqrt{2}\pi a (\Delta S)} \Big(T \cos \theta - Q \frac{a}{\Omega R_e^2} \Big) J_{mB}\Big(\frac{m B \Omega}{a} R_e \sin \theta \Big) \\
+    p_{m_T} = \frac{-\rho (m B \Omega)^2 B}{3 \sqrt{2} \pi (\Delta S)} c t R_e J_{mB} \Big(\frac{m B \Omega}{a} R_e \sin \theta \Big) \\
+    SPL = 10 \log_10 \bigg[N \bigg(\frac{p_{m_L}^2+p_{m_T}^2}{p_{ref}^2} \bigg) \bigg]
 \end{align}
 
+$p_{m_L}$ and $p_{m_T}$ are the root mean square (RMS) sound pressures for loading and thickness noise, respectively. $m$ is the harmonic number (a positive integer), $N$ is the number of rotors, $B$ is the blade number per rotor, $\Omega$ is the rotor angular velocity, which is 
 
 
 \paragraph{Limitations}

@@ -25,7 +25,8 @@
 \usepackage{ltxtable, lscape}
 \usepackage[final]{pdfpages}
 
-\renewcommand{\nomname}{\huge{\sffamily Nomenclature}\addcontentsline{toc}{section}{Nomenclature}}
+\renewcommand{\nomname}{\chaptitlefamily{Nomenclature}
+\addcontentsline{toc}{section}{Nomenclature}}
 
 \setlength{\nomitemsep}{0pt}
 
@@ -144,9 +145,9 @@ by
 \printnomenclature
 \end{multicols}
 
-\glsaddall
-\printnoidxglossary[type=\acronymtype,  title=List of Abbreviations]
-\printacronyms
+%\glsaddall
+%\printnoidxglossary[type=\acronymtype,  title=List of Abbreviations]
+%\printacronyms
 
 \input{Chapters/Introduction.tex}
 

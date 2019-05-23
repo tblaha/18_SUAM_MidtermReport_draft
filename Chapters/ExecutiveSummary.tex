@@ -69,6 +69,48 @@ After analysing the different options for the system, it was found that only the
 \section{Trade-Off}
 It was decided that for three different capacity of passengers per vehicle ranges concepts would be designed. The capacity ranges are 1-2, 4-6 and 20+ passengers. For each capacity range three concepts were thought of. Every concept was evaluated by making use of the tool. By comparing the outputs of all the concepts, a winning concepts was chosen for each capacity range. The input and output values of each winning concepts are presented in \autoref{inputswinES} and \autoref{outputswinES} respectively. The concepts will be scored on the established quantitative and qualitative criteria on a scale from 1 to 5. Then, the weight factors are added, leading to the final winning concept. 
 
+\begin{table}[H]
+\captionsetup{justification=centering}
+\caption{Inputs of winning vehicles}
+\label{inputswinES}
+\begin{tabular}{llll}
+\hline
+\textbf{Parameter}                    & \textbf{1-2 pax}      & \textbf{4-6 pax} & \textbf{20+ pax}    \\ \hline
+MTOW {[}kg{]}                         & 575                   &    971              & 7418                \\
+OEW/MTOW        & 0.40                    &   0.35          & 0.45                  \\
+\# Passengers {[}-{]}                 & 2                     &      4            & 20                  \\
+Range {[}km{]}                        & 60                    &       60           & 60                  \\
+Max Dimension {[}m{]}                 & 5                     &      10            & 18                  \\
+%Battery Energy density {[}Wh/kg{]}    & 260                &      260            & 260               \\
+%Battery Power density {[}W/kg{]}      & 2100               &          2100        & 2100              \\
+L/D {[}-{]}                           & 12                    &       15           & 13                  \\
+Radius of rotors (x number of rotors) & 0.85 (2x) \& 0.8 (2x) &    1 (x4); 1.5 (x1); 0.7 (x2)             & 2.5 (x4), 0.85 (x4) \\
+Cruise Velocity {[}m/s{]}             & 32                    &        82          & 111.1               \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\captionsetup{justification=centering}
+\caption{Outputs of winning vehicles}
+\label{outputswinES}
+\begin{tabular}{llll}
+\hline
+\textbf{Parameter}                          & \textbf{1-2 pax} & \textbf{4-6 pax} & \textbf{20+ pax} \\ \hline
+\# Vehicles {[}-{]}                         & 12900             &     3350             & 1500             \\
+\# Pads {[}-{]}                             & 1620             &        800          & 550              \\
+\# Trips/day {[}-{]}                        & 308000           &       124000           & 26000            \\
+\# PREE {[}Wh/(pax-km){]}                   & 790           &        670          & 1230           \\
+\# Ticket price per kilometre {[}\$/km{]} & 2.34             &    3.85              & 7.84             \\
+\# Ticket price per kilometre {[}\$/km - pad costs{]} & 0.62             &    0.42              & 0.59             \\
+\# Passengers/day {[}-{]}                   & 32700           &     269000             & 259000           \\
+Vertiport Area {[}m\textsuperscript{2}{]}   & 630            &     2870             & 5700             \\
+Total System Area {[}km\textsuperscript{2}  & 1.01          &       1.55           & 3.12          \\
+Total Board Time {[}s{]}                    & 210              &        300          & 1020             \\
+Noise {[}dBA{]}                             & 71             &       74           & 89             \\ 
+Downwash [m/s]                              & 51            &       33              &   48      \\ \hline
+\end{tabular}
+\end{table}
+
 \section{Sensitivity Analysis}
 
 
