@@ -14,7 +14,7 @@
 \usepackage{enumitem} % changed 26-09-19, provides custom enumerate labels
 \usepackage{nomencl}
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}} %David added
-\usepackage[acronym]{glossaries}
+\usepackage[utf8]{inputenc}
 \usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{gensymb}
@@ -36,10 +36,24 @@
 \vspace{8pt}%
 }
 
+
+\usepackage[acronym]{glossaries}
+\makeglossaries
+\input{Chapters/Abbreviations.tex}
+
+
+
+
+
+
 \begin{document}
 
 \renewcommand{\chapterautorefname}{Chapter} %to make the chapter with a capital letter
 \renewcommand{\sectionautorefname}{Section} %to make the section with a capital letter
+
+
+
+
 
 \begin{titlepage}
 
@@ -119,7 +133,6 @@ by
 \printnomenclature
 
 
-\input{Chapters/Abbreviations.tex}
 \printglossary
 \printglossary[type=\acronymtype, title=List of Abbreviations]
 
