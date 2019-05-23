@@ -2,7 +2,7 @@
 \chapter{Criteria \& Tools}
 \label{CriteriaTools}
 
-In this chapter, the trade off between vehicle concepts will be extensively discussed. The objective is to select a combination of vehicle size and network type that best suits the demand in Los Angeles. Initially, the trade off criteria will be presented in section \ref{sec:Criteria}. Following this will be a selection of tools used for the criteria in section \ref{sec:Tools} and a sensitivity analysis in section \ref{sec:sensitivityanalysis}. 
+In this chapter, the criteria that will be used in trading off the concepts will be discussed. For this both qualitative and quantitative criteria are used and the weights are determined. After the description of these criteria in \autoref{sec:Criteria}, in \autoref{sec:Tools} the tools used to find the values for these criteria are described. Following this will be an overview of the integration of all the tools in \ref{sec:toolintegration} and a sensitivity analysis in section \ref{sec:sensitivityanalysis}. 
 
 
 
@@ -37,7 +37,7 @@ Each of the important aspects of the solution highlighted above can be assessed 
 \paragraph{Qualitative Criteria}
 
 \begin{itemize}
-    \item \underline{Safety}: Even though this is a qualitative criteria, it can be assessed by thinking about the number of fatalities per crash times the probability of a certain concept crashing. The number of fatalities per crash can be estimated by looking at the number of passengers and the crashworthiness of the vehicle (does it fall from the sky like a brick, does it autorotate, does it glide?). The probability of a crash can be estimated by looking for single points of failure in the concept or likely failure modes of the VTOL concept (Vortex Ring State for instance).
+    \item \underline{Safety}: Even though this is a qualitative criteria, it can be assessed by thinking about the number of fatalities per crash times the probability of a certain concept crashing. The number of fatalities per crash can be estimated by looking at the number of passengers and the crashworthiness of the vehicle (does it fall from the sky like a brick, does it autorotate, does it glide?). The probability of a crash can be estimated by looking for single points of failure in the concept or likely failure modes of the VTOL concept (Vortex Ring State for instance). Also a higher number of rotating elements gives a higher probability of failure than an aircraft that just uses control surfaces. 
     \item \underline{Passenger experience}: The passenger experience includes everything from comfort, view, motion sickness, luxury feeling, vibration levels, cabin noise, etc.
 %    \item \underline{Urban disruption}:
 \end{itemize}
@@ -71,7 +71,7 @@ Each of the important aspects of the solution highlighted above can be assessed 
 \begin{itemize}
     %\item \underline{Production costs}: This includes ...
    % \item \underline{Operational costs}: this includes
-   \item \underline{Ticket price/pax/km}: this metric is found by calculating the production cost of the fleet of vehicles (cost of batteries, OEW, avionics) plus the cost of operating the fleet of vehicles (energy price, piloting, mechanics, groundcrew, and vertiport area fee) up to the BEP and divided by the number of revenue pax*km that the service will provide up to the BEP. 
+   \item \underline{Ticket price/pax/km}: This metric is found by calculating the production cost of the fleet of vehicles (cost of batteries, OEW, avionics) plus the cost of operating the fleet of vehicles (energy price, piloting, mechanics, groundcrew, and vertiport area fee) up to the BEP and divided by the number of revenue pax*km that the service will provide up to the BEP. 
 \end{itemize}
 
 \subsection{Technical Risk}
@@ -79,7 +79,7 @@ Each of the important aspects of the solution highlighted above can be assessed 
 \paragraph{Qualitative Criteria}
 
 \begin{itemize}
-    \item \underline{ATM/UTM Efforts Needed}: This criterion, analyses the level of complexity and the amount of effort needed to safely and efficiently organize and manage the system of vehicles in a city. The level of complexity is deduced by determining the level of interference with nearby airports, hospitals, military training grounds, drones, etc. Intersections of vehicle flight paths may occur, resulting in a more complex system,  as multiple intersections per fixed route may occur, possibly resulting in collision between two vehicles if the system is not well defined and managed. Apart from interference with other vehicles and areas, the positioning of landing sites are taken into account as well, as a 1-2 pax vehicle may easily land on top of a building, whereas a 20+ pax vehicle requires a properly designed vertiport.
+    \item \underline{ATM/UTM Efforts Needed}: This criterion analyses the level of complexity and the amount of effort needed to safely and efficiently organize and manage the system of vehicles in a city. The level of complexity is deduced by determining the level of interference with nearby airports, hospitals, military training grounds, drones, etc. Intersections of vehicle flight paths may occur, resulting in a more complex system,  as multiple intersections per fixed route may occur, possibly resulting in collision between two vehicles if the system is not well defined and managed. Apart from interference with other vehicles and areas, the positioning of landing sites are taken into account as well, as a 1-2 pax vehicle may easily land on top of a building, whereas a 20+ pax vehicle requires a properly designed vertiport.
     \item \underline{Susceptibility to weather conditions}: This criterion analyses the resistance of the vehicle to bad weather conditions like wind gusts during flight or crosswinds during vertical take-off and landing. Furthermore, the effects of air density and rain on the performance of the vehicle are analysed and taken into account as well. 
     \item \underline{Modification of current regulations}: This criterion takes the current FAA regulations into account. These regulations include those with respect to the airspace, various weight classes and regulation concerning autonomy of aircraft. 
 
@@ -548,7 +548,7 @@ Currently, it is being used only in hover, but for proper optimization it will h
 The noise tool implemented for this stage of the project is based on \cite{Brown2018}, which presents a procedure for estimating harmonic and vortex noise for a rotorcraft in hover.
 
 
-\paragraph{Harmonic Noise} is also referred to as rotational or tonal noise and can be divided into loading noise, which is a direct consequence of thrust generation, and thickness noise, caused by finite rotor blade thickness. Appendix C in \cite{Brown2018} derives the Gutin and Deming formulae in equivalent-radius form. They are presented here in final form for brevity:
+\paragraph{Harmonic Noise} is also referred to as rotational or tonal noise and can be divided into loading noise, which is a direct consequence of thrust generation, and thickness noise, caused by finite rotor blade thickness. What makes this type of noise characteristic is that it is emitted at discrete frequency harmonics of the fundamental frequency (which is $\Omega B$ for a single rotor and $\Omega_u B_u+ \Omega_l B_l$). Appendix C in \cite{Brown2018} derives the Gutin and Deming formulae in equivalent-radius form. They are presented here in final form for brevity:
 
 \begin{align}
     p_{m_L} = \frac{mB\Omega}{2\sqrt{2}\pi a (\Delta S)} \Big(T \cos \theta - Q \frac{a}{\Omega R_e^2} \Big) J_{mB}\Big(\frac{m B \Omega}{a} R_e \sin \theta \Big) \\
@@ -556,7 +556,22 @@ The noise tool implemented for this stage of the project is based on \cite{Brown
     SPL = 10 \log_10 \bigg[N \bigg(\frac{p_{m_L}^2+p_{m_T}^2}{p_{ref}^2} \bigg) \bigg]
 \end{align}
 
-$p_{m_L}$ and $p_{m_T}$ are the root mean square (RMS) sound pressures for loading and thickness noise, respectively. $m$ is the harmonic number (a positive integer), $N$ is the number of rotors, $B$ is the blade number per rotor, $\Omega$ is the rotor angular velocity, which is 
+$p_{m_L}$ and $p_{m_T}$ are the root mean square (RMS) sound pressures for loading and thickness noise, respectively. $m$ is the harmonic number (a positive integer), $N$ is the number of rotors, $B$ is the blade number per rotor, $\Omega$ is the rotor angular velocity (which is found in the BEMT tool in an iteration), $a$ is the speed of sound, and $\Delta S$ is the distance between the rotor and the observer. $T$ is the rotor thrust, $Q$ is the rotor torque (also coming from the BEMT), and $\theta$ is the elevation angle (in rad) plus $\frac{pi}{2}$ between the observer and the rotor hub. $\rho$ is the air density, $c$ is the blade chord and $t$ is the blade maximum thickness. $J_{mB}$ is a Bessel function of the first kind of order $mB$. An effective rotor radius of $R_e = 0.8 R$ is recommended in \cite{Brown2018} and is an assumption that approximates the integral that should be used for more accurate predictions. These improvements will be implemented in the next phase of the design phase if deemed necessary.
+
+
+\paragraph{Vortex Noise}, also referred to as broadband noise is (as the name suggests) broadband in nature (continuous frequency spectrum). A model for vortex noise is derived in Appendix D A of reference \cite{Brown2018}, but is only presented in final form here:
+
+\begin{align}
+    SPL = 20 \log_10 \bigg[ K_2 \frac{V_T}{\rho (\Delta S)} \sqrt{\frac{NT}{s} \Big(\frac{T}{A} \Big)} \bigg] \\
+    f_{peak} = \frac{(V_{0.7}\text{St})}{h}
+\end{align}
+
+where $T/A$ is the rotor disk loading; $K_2$ is a semi-empirical constant. Although vortex noise is broadband it has a peak frequency $f_{peak}$, which is a function of 0.7 times the tip speed, the projected blade thickness $h$ and the Strouhal number St. With the peak frequency known, the vortex-noise frequency spectrum can be obtained using the method in Appendix D B of \cite{Brown2018}.
+
+
+\paragraph{Atmospheric Attenuation}
+
+
 
 
 \paragraph{Limitations}
@@ -595,22 +610,22 @@ The tool that gives an estimate of the downwash is for a large part dependent on
     T_\text{req} = m_\text{veh} \cdot a + m_\text{veh} \cdot g 
 \end{equation}
 
-The area covered by the rotor is another input that is needed. The velocity of the air at the rotor can be computed with the fundamental principles of momentum and energy, from which the following equation follows 
+The area covered by the rotor is another input that is needed. The velocity of the air at the rotor can be computed with the fundamental principles of momentum and energy, from which \autoref{fancyconservationlaws} follows.
 
 \begin{equation}
 \label{fancyconservationlaws}
     T_\text{req} = \rho\cdot A_\text{rotor}\cdot(V + u_1)\cdot u_3 
 \end{equation}
 
-A sketch of the situation is shown below
+% A sketch of the situation is shown below
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{Figures/downwashsketch.JPG}
-    \captionsetup{justification=centering}
-    \caption{Sketch of downwash computations}
-    \label{downwashsketch}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.5\linewidth]{Figures/downwashsketch.JPG}
+%     \captionsetup{justification=centering}
+%     \caption{Sketch of downwash computations}
+%     \label{downwashsketch}
+% \end{figure}
 
 The expression in \autoref{u1u3} can be substituted into \autoref{fancyconservationlaws}. This equation follows from momentum theory. 
 
@@ -917,19 +932,21 @@ Next, the journey time must be determined. This comes from a combination of the 
 
 \paragraph{Centralized System}
 % include image
-In the centralized port arrangement, each vehicle flies a mission out from the vertiport to any location, and then back. In the ideal case, it carries a maximum load of customers in both directions. This means there are two flight cycles of takeoff, cruise and landing, plus an additional boarding sequence while away from the vertiport (depicted in \autoref{fig:journey-central}. A single flight cycle can utilize the maximum range of the vehicle, and the "two-cycle" range (one way) can be easily calculated from \autoref{eq:twocycle}. The parameter $E_\text{TO}$ is a ratio specifying the percentage of the usable battery charge consumed for takeoff and ascent. For simplification, it is assumed the energy consumption for landing is the same as (or less than) cruise.
+In the centralized port arrangement, each vehicle flies a mission out from the vertiport to any location, and then back. In the ideal case, it carries a maximum load of customers in both directions. This means there are two flight cycles of takeoff, cruise and landing, plus an additional boarding sequence while away from the vertiport.
+%(depicted in \autoref{fig:journey-central}. 
+A single flight cycle can utilize the maximum range of the vehicle, and the "two-cycle" range (one way) can be easily calculated from \autoref{eq:twocycle}. The parameter $E_\text{TO}$ is a ratio specifying the percentage of the usable battery charge consumed for takeoff and ascent. For simplification, it is assumed the energy consumption for landing is the same as (or less than) cruise.
 
 \begin{equation}\label{eq:twocycle}
     r_\text{2-cycle} = \frac{1}{2}r_\text{max}\frac{1 - 2\cdot E_\text{TO}}{1 - E_\text{TO}}
 \end{equation}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{Figures/journey-Central.png}
-    \captionsetup{justification=centering}
-    \caption{The "Centralized" system features the ability to drop-off and pick up customers anywhere. One endpoint of all journeys must be at a vertiport.}
-    \label{fig:journey-central}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{Figures/journey-Central.png}
+%     \captionsetup{justification=centering}
+%     \caption{The "Centralized" system features the ability to drop-off and pick up customers anywhere. One endpoint of all journeys must be at a vertiport.}
+%     \label{fig:journey-central}
+% \end{figure}
 
 The time that the vehicle is away from the vertiport ($t_\text{away}$) is simply a sum of the flight cycles and the boarding time (not at the port) plus a small amount of hover time ($t_\text{hover}=0.5$) that may occur when negotiating landing and takeoff.
 
@@ -953,17 +970,19 @@ A port-to-port system limits the customer's journey end points to a vertiport lo
 Some adjustments are made to the turnaround and away time calculations in each case. In the case where the journey length is the same, assuming no change to vehicle design, the battery charging time is half, possibly reducing the turnaround time. There is no boarding occurring away from a port, so the away time only accounts for the cruise and hover. Alternatively, it can be considered that the boarding and charging at the "other" port is part of the away time. Then, after determining the gate capacity, it must be divided by two, since there are two gates in the system.
 
 \paragraph{Pure On-Demand System}
-In a pure on-demand system, the vehicle will charge at a port where customers do not arrive or depart. The vehicle must fly two "zombie" legs of the journey to meet the customer and then drop them off, before returning to charge. This becomes a "three-cycle" trip as depicted in \autoref{fig:journey-ondemand}. The length of each of the legs may vary, but the total range is still constant, assuming a constant amount of time used for hover and landing/takeoff. The total range of all three legs is calculated with \autoref{eq:threecycle}.
+In a pure on-demand system, the vehicle will charge at a port where customers do not arrive or depart. The vehicle must fly two "zombie" legs of the journey to meet the customer and then drop them off, before returning to charge. This becomes a "three-cycle" trip.
+% as depicted in \autoref{fig:journey-ondemand}. 
+The length of each of the legs may vary, but the total range is still constant, assuming a constant amount of time used for hover and landing/takeoff. The total range of all three legs is calculated with \autoref{eq:threecycle}.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{Figures/journey-ondemand.png}
-    \captionsetup{justification=centering}
-    \caption{When all flights are on-demand, it is likely the vehicle will require up to two "zombie" trips to return to charge.}
-    \label{fig:journey-ondemand}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{Figures/journey-ondemand.png}
+%     \captionsetup{justification=centering}
+%     \caption{When all flights are on-demand, it is likely the vehicle will require up to two "zombie" trips to return to charge.}
+%     \label{fig:journey-ondemand}
+% \end{figure}
 
-\begin{equation}[H]
+\begin{equation}
 \label{eq:threecycle}
 \begin{split}
     r_\text{total 3-cycle} = r_\text{max}\frac{1-3\cdot E_\text{TO}}{1 - E_\text{TO}}
@@ -1033,13 +1052,10 @@ In order to give appropriate importance to the particular criteria and sub-crite
 \begin{tabular}{|l|l|l|l}
 \cline{1-3}
 \textbf{Criteria}  &     \textbf{Sub-criteria}   & \textbf{Weight}  \\ \cline{1-3}
-\multirow{2}{*}{\textbf{Control System}} & Airspace structure  &  3.6  \\ \cline{2-3}
-                                         & \begin{tabular}[c]{@{}l@{}}Airspace management\\ and communications\end{tabular} &  2.5 \\ \cline{1-3}
-\multirow{2}{*}{\textbf{Air traffic density}} & Amount of vehicles  & 2.4   \\ \cline{2-3}
-                                         & Maximum vehicle throughput & 3.9  \\ \cline{1-3}
-          \multicolumn{2}{|l|}{\textbf{Interference}} & 3.9  \\ \cline{1-3}
-\multirow{2}{*}{\textbf{Control System}} & Autonomy & 4.1   \\ \cline{2-3}
-                                         & Flight scheduling &  3.2  \\ \cline{1-3}
+\multirow{2}{*}{\textbf{Air Traffic Density}} & Vehicle Size  &  3.1  \\ \cline{2-3}
+                                         & Maximum Hub throughput &  3.9 \\ \cline{1-3}
+\multirow{2}{*}{\textbf{Level of Interference}} & Level of airport interference  & 3.5   \\ \cline{2-3}
+                                         & MLevel of route intersections & 4.1  \\ \cline{1-3}
 
 \end{tabular}
 
