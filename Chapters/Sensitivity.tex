@@ -4,14 +4,23 @@
 The trade-off tool created to evaluate the concepts is quite complex and has many inter-dependencies. Each of these relations was plotted across a reasonable range of variance against all the significant outputs. Some of the most significant and interesting plots are discussed in this chapter. The trade-off criteria showed little sensitivity for many of the inputs and assumptions plotted. Those plots were either entirely independent of the input, or each of the concepts showed proportional effects, and will have little effect on the trade-off.
 
 \section{Pad Costs}
-It was determined that the pad cost could be a major driver of ticket price. The initial assumption was that the ground area needed for the vertiports in downtown LA would have similar cost to office space. In this case, over 80\% of the ticket goes just to these rental fees as showing in \autoref{fig:sens01}. The black x's in the plot show the operating cost without any pad costs. Ideally, better cost arrangements or business models can be developed to subsidise or eliminate the pad cost.
+It was determined that the pad cost could be a major driver of ticket price. The initial assumption was that the ground area needed for the vertiports in downtown LA would have similar cost to office space. If this is the case, over 80\% of the ticket price goes just to these rental fees. This can be seen in \autoref{fig:sens01}. The black x's in the plot show the operating cost without any pad costs. Ideally, better cost arrangements or business models can be developed to subsidise or eliminate the pad cost.
 
 \section{Minimum Trip Range}
 By limiting the trip range to a certain minimum, there are two effects that cause the ticket price to drop as shown in \autoref{fig:sens02}. First, the trip efficiency increases if no short trips are allowed (shown in \autoref{fig:sens03}), which reduces operating cost. In addition, due to the calculation method, a larger market share is used as the minimum increases. Naturally, a larger market share allows for a lower ticket price in the long run. 
 
-\autoref{fig:sens1} shows that the Total system area increases due to the increased market share when increasing minimum range. This would increase the pad costs (driving ticket price), but the increased market share still allows for a reduce in final ticket price. Going forward, the demand must be considered to determine how much market share will be possible in reality. This is an important risk to consider, as it drives the final success of the system. The current tool assumes that demand is essentially infinite, but in reality is likely to be tied directly to trip range.
+\autoref{fig:sens1} shows that the Total system area increases due to the increased market share when increasing minimum range. This would increase the pad costs (driving ticket price), but the increased market share still allows for a reduce in final ticket price. 
 
-\begin{figure}[H]
+When increasing the last-mile penalty, the market share increases, as shown in \autoref{fig:sens2}. Intuitively, it should reduce the market share, as a bigger last-mile penalty would normally decrease demand for flying (it would take longer to get to and from the vertiport). However, the tool adjusts the market share to meet a standard time savings.
+
+Going forward, the demand must be considered to determine how much market share will be possible in reality. This is an important risk to consider, as it drives the final success of the system. The current tool assumes that demand is essentially infinite, but in reality is likely to be tied directly to trip range and last-mile penalty.
+
+
+\section{Cruise Altitude}
+As expected, the energy required and overall cost increases if a higher cruise altitude is required. This altitude may come from noise and ATC requirements. It is interesting to note that the 2 and 20 passenger vehicles outperform one another depending on this altitude, as shown in in \autoref{fig:sens3}.
+
+
+\begin{figure}[h]
 \begin{subfigure}[t]{0.33\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/cost_oper.png}
@@ -39,7 +48,7 @@ By limiting the trip range to a certain minimum, there are two effects that caus
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{subfigure}[t]{0.33\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/report_sys_area.png}
@@ -49,7 +58,7 @@ By limiting the trip range to a certain minimum, there are two effects that caus
 \end{subfigure}
 \begin{subfigure}[t]{0.33\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{Figures/report_sys_area.png}
+    \includegraphics[width=\textwidth]{Figures/report_marketshare.png}
     \captionsetup{justification=centering}
     \caption{}
     \label{fig:sens2}
@@ -67,19 +76,7 @@ By limiting the trip range to a certain minimum, there are two effects that caus
 \end{figure}
 
 
-\section{Cruise Altitude}
-As expected, the energy required and overall cost increases if a higher cruise altitude is required. This altitude may come from noise and ATC requirements. It is interesting to note that the 2 and 20 passenger vehicles outperform one another depending on this altitude, as shown in in \autoref{fig:sens3}.
-
-\section{Vehicle Weight and Energy Consumption}
-Some sensitivities are intuitively explained and verify the correct working of the tool. For example, an increase in the fraction of empty and maximum operational mass causes a higher ticket price. The heaviest vehicle is effected most by that effect as can be told by comparing the slopes in figure \ref{fig:sens4}. A more efficient cruise causes the energy consumption to be lower which also decreases OEW (OEW is considered an output of the tool here, since it is converged on every run). 
-
-Counterintuitive is that ticket price can increase with increasing energy density. This does not seem to make sense at first. However, consider that charge rate density (expressed in W/kg) is kept constant when energy density is perturbed. Recall, that the batteries recharging time is modelled as inversely proportional to the charge rate and proportional to the energy needed for every given trip. Since the chosen vehicles are energy limited (not power limited during take off) this means that battery mass decreases as energy density increases. However, the trip energy demand is not linear in the battery mass (varies approximately as $MTOW\sqrt{MTOW}$ during the hovering phases), as opposed to the charge rate which \emph{is} inversely proportional to the battery mass.
-
-This way, charge time actually increases since the increase in charge rate with battery mass is lower than the increase in energy demand with battery mass and so a longer turnaround time is needed for recharging which necessitates a bigger fleet and more vertiports for the same passenger throughput. This means that we will have to find battery technology that does not just increase energy density, since a smaller battery does not necessarily improves economic performance; a very interesting result. The reason for the 20 person vehicle in \autoref{fig:sens6} not following this trend is because the turnaround time is limited by boarding procedures, not charging time, so a longer charging time does not deteriorate ticket price. The bottom line to this is that optimisation for the smallest necessary battery weight, as done in tool, may not yield the lowest ticket price even if it improves sustainability through less battery mass and lower energy usage per passenger kilometre.
-
-Also; not shown here, the system area increases for a higher L/D and if pad infrastructure costs are higher than shown here, the sensitivity in L/D can reverse and a higher L/D actually increases ticket prices, if optimisation for the lightest possible MTOW is performed, as usual. Compare with \autoref{fig:sens5}.
-
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{subfigure}[t]{0.33\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/OEWMTOW_TPrice_perkmNOPAD.png}
@@ -106,7 +103,7 @@ Also; not shown here, the system area increases for a higher L/D and if pad infr
 \label{fig:sens456}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{subfigure}[t]{0.33\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/CRate_TPrice_perkmNOPAD.png}
@@ -123,9 +120,9 @@ Also; not shown here, the system area increases for a higher L/D and if pad infr
 \end{subfigure}
 \begin{subfigure}[t]{0.33\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{}
+    \includegraphics[width=\textwidth]{Chapters/cruise_marketshare.png}
     \captionsetup{justification=centering}
-    \caption{}
+    \caption{Market share vs. Cruise velocity}
     \label{fig:sens9}
 \end{subfigure}
 \captionsetup{justification=centering}
@@ -133,7 +130,15 @@ Also; not shown here, the system area increases for a higher L/D and if pad infr
 \label{fig:sens789}
 \end{figure}
 
-\subsection{Autonomous and Remotely Assisted Piloting}
+\section{Vehicle Weight and Energy Consumption}
+Some sensitivities are intuitively explained and verify the correct working of the tool. For example, an increase in the fraction of empty and maximum operational mass causes a higher ticket price. The heaviest vehicle is effected most by that effect as can be told by comparing the slopes in figure \ref{fig:sens4}. A more efficient cruise causes the energy consumption to be lower which also decreases OEW (OEW is considered an output of the tool here, since it is converged on every run). 
+
+Counterintuitive is that ticket price can increase with increasing energy density. This does not seem to make sense at first. However, consider that charge rate density (expressed in W/kg) is kept constant when energy density is perturbed. Recall, that the batteries recharging time is modelled as inversely proportional to the charge rate and proportional to the energy needed for every given trip. Since the chosen vehicles are energy limited (not power limited during take off) this means that battery mass decreases as energy density increases. However, the trip energy demand is not linear in the battery mass (varies approximately as $MTOW\sqrt{MTOW}$ during the hovering phases), as opposed to the charge rate which \emph{is} inversely proportional to the battery mass.
+
+This way, charge time actually increases since the increase in charge rate with battery mass is lower than the increase in energy demand with battery mass and so a longer turnaround time is needed for recharging which necessitates a bigger fleet and more vertiports for the same passenger throughput. This means that we will have to find battery technology that does not just increase energy density, since a smaller battery does not necessarily improves economic performance; a very interesting result. The reason for the 20 person vehicle in \autoref{fig:sens6} not following this trend is because the turnaround time is limited by boarding procedures, not charging time, so a longer charging time does not deteriorate ticket price. The bottom line to this is that optimisation for the smallest necessary battery weight, as done in tool, may not yield the lowest ticket price even if it improves sustainability through less battery mass and lower energy usage per passenger kilometre.
+
+Also; not shown here, the system area increases for a higher L/D and if pad infrastructure costs are higher than shown here, the sensitivity in L/D can reverse and a higher L/D actually increases ticket prices, if optimisation for the lightest possible MTOW is performed, as usual. Compare with \autoref{fig:sens5}.
+
 
 \begin{wrapfigure}[18]{r}{0.35\textwidth}
     \centering
@@ -142,5 +147,10 @@ Also; not shown here, the system area increases for a higher L/D and if pad infr
     \caption{Ticket price increase due to including remote pilots, to assist autonomous vehicles.}
     \label{fig:autocost}
 \end{wrapfigure}
+
+\section{Cruise Velocity}
+The cruise velocity is dependent on the vehicle design but does have an important impact on the ticket price, due to its link with travel time. This ticket price shown in \autoref{fig:sens8} is partly due to the market share (shown in \autoref{fig:sens9}). The shape of the plots are determined by the market share, but their translation is due to other sensitivities. Fortunately, there is a stand-out winner that may override those sensitivities.
+
+\section{Autonomous and Remotely Assisted Piloting}
 
 Much of the trade-off has been done assuming that all the vehicles are completely autonomous. It is likely that remote piloting capabilities will be necessary for safety reasons. A pilot may need to intervene in certain situations. This also helps with a feeling of comfort for passengers. These pilots cost money, and will increase the operating cost per vehicle. By completing a sensitivity study based on the number of remote pilots, it can be shown at what point one concept may cost less than another. \autoref{fig:autocost} shows that the large vehicle benefits the most, and becomes cheaper (per km) to operate than the 4 passenger at 0.5 (1 pilot for every 2 vehicles). It seems more likely that less pilots will be required though.

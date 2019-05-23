@@ -175,38 +175,38 @@ A numerical representation of the systems is the foundation of the tools outline
 \Xhline{2\arrayrulewidth}
 \multicolumn{1}{|l|}{} & \textbf{Parameter} & \textbf{Unit} & \textbf{Description} \\ \Xhline{2\arrayrulewidth}
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Fixed}}}} 
-                       &    obj.S\_target     &    pax/m/s    &   Target system gain  \\ \cline{2-4} 
-                       &    obj.cost.energy\_perkWh    &    USD/kWh    &   Energy cost per kWh (based on battery cost)  \\ \cline{2-4}
-                       &    obj.cost.padfee\_perday     &    $USD/m^{2}/day$    &   Landing pad fee  \\ \cline{2-4}
-                       &    obj.cost.BEP     &    years    &   Years until breakeven point  \\ \cline{2-4}
-                       &    obj.pilots.rate     &    USD/hr    &   Pilot fee  \\ \cline{2-4}
-                       &    obj.cost.grcrew\_perhour     &    USD/hr    &   Operations crew fee  \\ \cline{2-4}
-                       &    obj.cost.mech\_perhour     &    USD/hr    &   Mechanics fee  \\ \cline{2-4}
-                       &    obj.first\_last\_mile\_time     &    $s$    &   Time for first and last mile combined  \\ \cline{2-4}
-                       &    obj.climb.initial\_lateral     &    m    &   Initial horizontal climb  \\ \cline{2-4}
-                       &    obj.climb.initial\_vertical     &    m    &   Initial vertical climb  \\ \cline{2-4}
-                       &    obj.taxi\_time    &    s    &   \begin{tabular}[c]{@{}l@{}}Land/take-off, taxi, de-spin/spin and standby\\ time\end{tabular}  \\ \cline{2-4}
-                       &    obj.cost.dev     &    USD    &   Development cost for UAM  \\ \cline{2-4}
-                       &    obj.TO\_TtoW\_ratio     &    -    &   Take-off thrust over weight ratio???  \\ \cline{2-4}
-                       &    obj.climb.ROC     &    m/s    &   Rate of climb, climb phase  \\ \cline{2-4}
-                       &    obj.cruise.alt     &    m    &   Cruise altitude  \\ \cline{2-4}
-                       &    obj.hover.time     &    s    &   Hover time  \\ \cline{2-4}
-                       &    obj.obs\_location.theta     &    rad    &   \begin{tabular}[c]{@{}l@{}}azimuth, RH positive top down, 0 through\\ nose\end{tabular}  \\ \cline{2-4}
-                       &    obj.obs\_location.r     &    m    &   \begin{tabular}[c]{@{}l@{}}100 we are taking as the average skyscraper\\ height in downtown LA. So take-off in highly\\ populated areas will occur at 100 m altitude\end{tabular}  \\ \cline{2-4}
-                       &    obj.cost.grcrew\_daily\_time     &    s/day/worker    &   Active working time ground crew  \\ \cline{2-4}
-                       &    obj.cost.perhub     &    USD/hub    &   Cost to build a hub  \\ \cline{2-4}
-                       &    obj.clearancegamma     &    rad    &   Clearance flight path angle  \\ \Xhline{2\arrayrulewidth}
+                       &    ops.S\_target     &    pax/m/s    &   Target system gain  \\ \cline{2-4} 
+                       &    ops.cost.energy\_perkWh    &    USD/kWh    &   Energy cost per kWh (based on battery cost)  \\ \cline{2-4}
+                       &    ops.cost.padfee\_perday     &    $USD/m^{2}/day$    &   Landing pad fee  \\ \cline{2-4}
+                       &    ops.cost.BEP     &    years    &   Years until breakeven point  \\ \cline{2-4}
+                       &    ops.pilots.rate     &    USD/hr    &   Pilot fee  \\ \cline{2-4}
+                       &    ops.cost.grcrew\_perhour     &    USD/hr    &   Operations crew fee  \\ \cline{2-4}
+                       &    ops.cost.mech\_perhour     &    USD/hr    &   Mechanics fee  \\ \cline{2-4}
+                       &    ops.first\_last\_mile\_time     &    $s$    &   Time for first and last mile combined  \\ \cline{2-4}
+                       &    ops.climb.initial\_lateral     &    m    &   Initial horizontal climb  \\ \cline{2-4}
+                       &    ops.climb.initial\_vertical     &    m    &   Initial vertical climb  \\ \cline{2-4}
+                       &    ops.taxi\_time    &    s    &   \begin{tabular}[c]{@{}l@{}}Land/take-off, taxi, de-spin/spin and standby\\ time\end{tabular}  \\ \cline{2-4}
+                       &    ops.cost.dev     &    USD    &   Development cost for UAM  \\ \cline{2-4}
+                       &    ops.TO\_TtoW\_ratio     &    -    &   Take-off thrust over weight ratio???  \\ \cline{2-4}
+                       &    ops.climb.ROC     &    m/s    &   Rate of climb, climb phase  \\ \cline{2-4}
+                       &    ops.cruise.alt     &    m    &   Cruise altitude  \\ \cline{2-4}
+                       &    ops.hover.time     &    s    &   Hover time  \\ \cline{2-4}
+                       &    ops.obs\_location.theta     &    rad    &   \begin{tabular}[c]{@{}l@{}}azimuth, RH positive top down, 0 through\\ nose\end{tabular}  \\ \cline{2-4}
+                       &    ops.obs\_location.r     &    m    &   \begin{tabular}[c]{@{}l@{}}100 we are taking as the average skyscraper\\ height in downtown LA. So take-off in highly\\ populated areas will occur at 100 m altitude\end{tabular}  \\ \cline{2-4}
+                       &    ops.cost.grcrew\_daily\_time     &    s/day/worker    &   Active working time ground crew  \\ \cline{2-4}
+                       &    ops.cost.perhub     &    USD/hub    &   Cost to build a hub  \\ \cline{2-4}
+                       &    ops.clearancegamma     &    rad    &   Clearance flight path angle  \\ \Xhline{2\arrayrulewidth}
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Variable}}}}  
-                       &    obj.piloting     &    -    &   'piloted' or 'autonomous'  \\ \cline{2-4}
-                       &    obj.min\_range     &    m    &   Minimum range  \\ \cline{2-4}
-                       &    obj.cruise.vel     &    m/s    &   Cruise velocity  \\ \cline{2-4}
-                       &    obj.climb.vclimb     &    m/s    &   Average velocity, climb phase  \\ \cline{2-4}
-                       &    obj.climb.gamma     &    rad    &   Flight path angle, climb phase \\ \cline{2-4}
-                       &    obj.pilots.num     &    -    &   Number of pilots per vehicle  \\ \cline{2-4}
-                       &    obj.pilots.opsrate     &    -    &   \begin{tabular}[c]{@{}l@{}}Ratio pilot billed hours over flight operations\\ hours\end{tabular}   \\ \cline{2-4}
-                       &    obj.cost.maint\_hours     &    -    &   Ratio maintenance hours over flight hours  \\ \cline{2-4}
-                       &    obj.cost.grcrew\_num\_per\_pad     &    -    &   Number of ground crew workers per pad  \\ \cline{2-4}
-                       &    obj.n     &    -    &   Number of routes to serve  \\ \Xhline{2\arrayrulewidth}
+                       &    ops.piloting     &    -    &   'piloted' or 'autonomous'  \\ \cline{2-4}
+                       &    ops.min\_range     &    m    &   Minimum range  \\ \cline{2-4}
+                       &    ops.cruise.vel     &    m/s    &   Cruise velocity  \\ \cline{2-4}
+                       &    ops.climb.vclimb     &    m/s    &   Average velocity, climb phase  \\ \cline{2-4}
+                       &    ops.climb.gamma     &    rad    &   Flight path angle, climb phase \\ \cline{2-4}
+                       &    ops.pilots.num     &    -    &   Number of pilots per vehicle  \\ \cline{2-4}
+                       &    ops.pilots.opsrate     &    -    &   \begin{tabular}[c]{@{}l@{}}Ratio pilot billed hours over flight operations\\ hours\end{tabular}   \\ \cline{2-4}
+                       &    ops.cost.maint\_hours     &    -    &   Ratio maintenance hours over flight hours  \\ \cline{2-4}
+                       &    ops.cost.grcrew\_num\_per\_pad     &    -    &   Number of ground crew workers per pad  \\ \cline{2-4}
+                       &    ops.n     &    -    &   Number of routes to serve  \\ \Xhline{2\arrayrulewidth}
 \end{tabular}
 \end{table}
 
@@ -219,12 +219,12 @@ A numerical representation of the systems is the foundation of the tools outline
 \Xhline{2\arrayrulewidth}
 \multicolumn{1}{|l|}{} & \textbf{Parameter} & \textbf{Unit} & \textbf{Description} \\ \Xhline{2\arrayrulewidth}
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Fixed}}}}  
-                       &    obj.T     &    $K$    &   Local temperature  \\ \cline{2-4} 
-                       &    obj.rho     &    $kg/m^{3}$    &   Local density  \\ \cline{2-4} 
-                       &    obj.a     &    $m/s$    &   Speed of sound  \\ \cline{2-4}
-                       &    obj.wind     &    $m/s$    &   Local wind speed  \\ \cline{2-4}
-                       &    obj.rel\_humidity     &    \%    &   Local humidity  \\ \cline{2-4}
-                       &    obj.p     &    $Pa$    &   Ambient pressure  \\ \Xhline{2\arrayrulewidth}
+                       &    atm.T     &    $K$    &   Local temperature  \\ \cline{2-4} 
+                       &    atm.rho     &    $kg/m^{3}$    &   Local density  \\ \cline{2-4} 
+                       &    atm.a     &    $m/s$    &   Speed of sound  \\ \cline{2-4}
+                       &    atm.wind     &    $m/s$    &   Local wind speed  \\ \cline{2-4}
+                       &    atm.rel\_humidity     &    \%    &   Local humidity  \\ \cline{2-4}
+                       &    atm.p     &    $Pa$    &   Ambient pressure  \\ \Xhline{2\arrayrulewidth}
 \end{tabular}
 \end{table}
 
@@ -322,7 +322,7 @@ This same energy calculation can also be used to determine the energy requiremen
     E_\text{day} = \eta_\text{zombie}\cdot N_\text{flights per day} \cdot \left[ E_\text{flight MTOW}c_\text{zombie} + E_\text{flight OEW}(1-c_\text{zombie}) \right]
 \end{equation}
 
-\begin{table}[H]
+\begin{table}[]
 \centering
 \captionsetup{justification=centering}
 \caption{Vehicle inputs}
@@ -331,43 +331,43 @@ This same energy calculation can also be used to determine the energy requiremen
 \Xhline{2\arrayrulewidth}
 \multicolumn{1}{|l|}{} & \textbf{Parameter} & \textbf{Unit} & \textbf{Description} \\ \Xhline{2\arrayrulewidth}
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Fixed}}}}  
-                       &    obj.pax\_mass     &    kg    &   \begin{tabular}[c]{@{}l@{}}Passenger+payload mass (per\\ passenger)\end{tabular}  \\ \cline{2-4} 
-                       &    obj.coax.trim     &    -    &   \begin{tabular}[c]{@{}l@{}}Coaxial rotor; ratio between lower rotor pitch\\ and upper rotor pitch\end{tabular}  \\ \cline{2-4}
-                       &    obj.coax.kappaint     &    -    &   \begin{tabular}[c]{@{}l@{}}Coaxial rotor; induced power interference\\ factor\end{tabular}  \\ \cline{2-4}
-                       &    obj.coax.rd     &    \%    &   Coaxial rotor; contraction radius  \\ \cline{2-4}
-                       &    obj.cost.perkgmtow     &    USD    &   Vehicle cost per kg  \\ \cline{2-4}
-                       &    obj.cost.avionics     &    USD    &   Avionics cost  \\ \cline{2-4}
-                       &    obj.perf.nc     &    -    &   Cruise efficiency  \\ \cline{2-4}
-                       &    obj.perf.nh     &    -    &   Hover efficiency  \\ \cline{2-4}
-                       &    obj.perf.LoDclimb     &    -    &   Lift over drag - Climb  \\ \cline{2-4}
-                       &    obj.bat.max\_ops\_charge     &    -    &   Maximum charge level during operations  \\ \cline{2-4}
-                       &    obj.bat.min\_ops\_charge     &    -    &   Minimum charge level during operations  \\ \cline{2-4} 
-                       &    modelpropunit.axialvel     &    m/s    &   Rotor axial velocity  \\ \cline{2-4}
-                       &    modelrotor(1).solidity     &    -    &   Rotor blade solidity  \\ \cline{2-4}
-                       &    modelrotor(1).kappa     &    -    &   single rotor induced power factor (Leishman)  \\ \cline{2-4}
-                       &    modelrotor(1).blades.cl\_alpha     &    /\degree    &   Lift curve slope  \\ \cline{2-4}
-                       &    modelrotor(1).blades.Cd0     &    -    &   Rotor blade profile drag  \\ \cline{2-4}
-                       &    modelrotor(1).blades.D1     &    -    &   Quadratic coefficient drag curve  \\ \cline{2-4}
-                       &    modelrotor(1).blades.D2     &   -    &   Linear coefficient drag curve  \\ \cline{2-4}
-                       &    modelrotor(1).blades.pitch\_deg     &    \degree    &   Rotor blade pitch  \\ \Xhline{2\arrayrulewidth}
+                       &    veh.pax\_mass     &    kg    &   \begin{tabular}[c]{@{}l@{}}Passenger+payload mass (per\\ passenger)\end{tabular}  \\ \cline{2-4} 
+                       &    veh.coax.trim     &    -    &   \begin{tabular}[c]{@{}l@{}}Coaxial rotor; ratio between lower rotor pitch\\ and upper rotor pitch\end{tabular}  \\ \cline{2-4}
+                       &    veh.coax.kappaint     &    -    &   \begin{tabular}[c]{@{}l@{}}Coaxial rotor; induced power interference\\ factor\end{tabular}  \\ \cline{2-4}
+                       &    veh.coax.rd     &    \%    &   Coaxial rotor; contraction radius  \\ \cline{2-4}
+                       &    veh.cost.perkgmtow     &    USD    &   Vehicle cost per kg  \\ \cline{2-4}
+                       &    veh.cost.avionics     &    USD    &   Avionics cost  \\ \cline{2-4}
+                       &    veh.perf.nc     &    -    &   Cruise efficiency  \\ \cline{2-4}
+                       &    veh.perf.nh     &    -    &   Hover efficiency  \\ \cline{2-4}
+                       &    veh.perf.LoDclimb     &    -    &   Lift over drag - Climb  \\ \cline{2-4}
+                       &    veh.bat.max\_ops\_charge     &    -    &   Maximum charge level during operations  \\ \cline{2-4}
+                       &    veh.bat.min\_ops\_charge     &    -    &   Minimum charge level during operations  \\ \cline{2-4} 
+                       &    prop.unit.propunit.axialvel     &    m/s    &   Rotor axial velocity  \\ \cline{2-4}
+                       &    prop.unit.rotor(1).solidity     &    -    &   Rotor blade solidity  \\ \cline{2-4}
+                       &    prop.unit.rotor(1).kappa     &    -    &   single rotor induced power factor (Leishman)  \\ \cline{2-4}
+                       &    prop.unit.rotor(1).blades.cl\_alpha     &    /\degree    &   Lift curve slope  \\ \cline{2-4}
+                       &    prop.unit.rotor(1).blades.Cd0     &    -    &   Rotor blade profile drag  \\ \cline{2-4}
+                       &    prop.unit.rotor(1).blades.D1     &    -    &   Quadratic coefficient drag curve  \\ \cline{2-4}
+                       &    prop.unit.rotor(1).blades.D2     &   -    &   Linear coefficient drag curve  \\ \cline{2-4}
+                       &    prop.unit.rotor(1).blades.pitch\_deg     &    \degree    &   Rotor blade pitch  \\ \Xhline{2\arrayrulewidth}
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Variable}}}}  
-                       &    obj.max\_dim     &    m    &   Vehicle maximum dimension (any direction) \\ \cline{2-4}
-                       &    obj.pax     &    people    &   Pax capacity vehicle \\ \cline{2-4}
-                       &    obj.config     &    -    &   \begin{tabular}[c]{@{}l@{}}Vehicle configuration (outlier/tilt/fixed/multi\\/average)\end{tabular}  \\ \cline{2-4}
-                       &    obj.struc.percent     &    \%    &   Vehicle structural percentage  \\ \cline{2-4}
-                       &    obj.bat.P\_dens     &    W/kg    &   Battery power density  \\ \cline{2-4}
-                       &    obj.bat.E\_dens     &    Wh/kg    &   Battery energy density  \\ \cline{2-4}
-                       &    obj.bat.eta\_charge\_discharge     &    \%    &   Battery charge/discharge efficiency  \\ \cline{2-4}
-                       &    obj.cost.bat\_perkWh     &    USD/kWh    &   Battery cost per kWh  \\ \cline{2-4}
-                       &    obj.perf.maxrange     &    m    &   Vehicle maximum range  \\ \cline{2-4}
-                       &    obj.perf.LoDcruise     &    -    &   Lift over drag, Cruise  \\ \cline{2-4}
-                       &    modelpropunit.num     &    -    &   Number of units in a propulsion unit  \\ \cline{2-4}
-                       &    modelpropunit.usage     &    -    &   Propulsion unit usage  \\ \cline{2-4}
-                       &    modelpropunit.config     &    -    &   Rotor configuration in propulsion unit  \\ \cline{2-4}
-                       &    modelpropunit.T\_percent\_hov     &    \%    &   \begin{tabular}[c]{@{}l@{}}Percentage of hover taken up by a propulsion\\ unit\end{tabular}  \\ \cline{2-4}
-                       &    modelrotor(1).blades.num     &    -    &   Number of blades per rotor  \\ \cline{2-4}
-                       &    modelrotor(1).radius     &    m    &   Rotor radius  \\ \cline{2-4}
-                       &    modelrotor(1).omega     &    rad/s    &   Rotor radial velocity  \\ \Xhline{2\arrayrulewidth}
+                       &    veh.max\_dim     &    m    &   Vehicle maximum dimension (any direction) \\ \cline{2-4}
+                       &    veh.pax     &    people    &   Pax capacity vehicle \\ \cline{2-4}
+                       &    veh.config     &    -    &   \begin{tabular}[c]{@{}l@{}}Vehicle configuration (outlier/tilt/fixed/multi\\/average)\end{tabular}  \\ \cline{2-4}
+                       &    veh.struc.percent     &    \%    &   Vehicle structural percentage  \\ \cline{2-4}
+                       &    veh.bat.P\_dens     &    W/kg    &   Battery power density  \\ \cline{2-4}
+                       &    veh.bat.E\_dens     &    Wh/kg    &   Battery energy density  \\ \cline{2-4}
+                       &    veh.bat.eta\_charge\_discharge     &    \%    &   Battery charge/discharge efficiency  \\ \cline{2-4}
+                       &    veh.cost.bat\_perkWh     &    USD/kWh    &   Battery cost per kWh  \\ \cline{2-4}
+                       &    veh.perf.maxrange     &    m    &   Vehicle maximum range  \\ \cline{2-4}
+                       &    veh.perf.LoDcruise     &    -    &   Lift over drag, Cruise  \\ \cline{2-4}
+                       &    propunit.num     &    -    &   Number of units in a propulsion unit  \\ \cline{2-4}
+                       &    propunit.usage     &    -    &   Propulsion unit usage  \\ \cline{2-4}
+                       &    propunit.config     &    -    &   Rotor configuration in propulsion unit  \\ \cline{2-4}
+                       &    propunit.T\_percent\_hov     &    \%    &   \begin{tabular}[c]{@{}l@{}}Percentage of hover taken up by a propulsion\\ unit\end{tabular}  \\ \cline{2-4}
+                       &    prop.unit.rotor(1).blades.num     &    -    &   Number of blades per rotor  \\ \cline{2-4}
+                       &    prop.unit.rotor(1).radius     &    m    &   Rotor radius  \\ \cline{2-4}
+                       &    prop.unit.rotor(1).omega     &    rad/s    &   Rotor radial velocity  \\ \Xhline{2\arrayrulewidth}
 \end{tabular}
 \end{table}
 
@@ -380,7 +380,7 @@ BEMT is a standard method for the analysis of helicopter rotors, it was formaliz
 The main assumption of BEMT is that successive blade elements have no mutual effects on each other,(a two-dimensional assumption). Classic Prandtl “tip loss” effects have been included into the BEMT, giving a first approximation of the three-dimensional effects that occur due to tip and root vortices.
 
 
-\begin{figure}[H]
+\begin{figure}[]
 \captionsetup[subfigure]{justification=centering}
 \begin{subfigure}[t]{0.5\textwidth}
     \centering
@@ -470,9 +470,9 @@ After quantifying the effect of this inaccuracy on the outputs of the tool which
 
 \paragraph{Future extensions}
 
-As mentioned previously, the tool as is is is not being used to its full potential. In later stages of the design it will be used to optimize the propulsion system of the winning concept.
+As mentioned previously, the tool as it is is not being used to its full potential. In later stages of the design it will be used to optimise the propulsion system of the winning concept.
 
-Currently, it is being used only in hover, but for proper optimization it will have to model the rotor in forward flight as well. An extension to the model presented in \cite{BEMT} will have to be made, which is currently only valid in hover and axial flight.
+Currently, it is being used only in hover, but for proper optimisation it will have to model the rotor in forward flight as well. An extension to the model presented in \cite{BEMT} will have to be made, which is currently only valid in hover and axial flight.
 
 %Extend to forward flight.
  %Sensitivity to omega and Q
@@ -559,11 +559,11 @@ The noise tool implemented for this stage of the project is based on \cite{Brown
 $p_{m_L}$ and $p_{m_T}$ are the root mean square (RMS) sound pressures for loading and thickness noise, respectively. $m$ is the harmonic number (a positive integer), $N$ is the number of rotors, $B$ is the blade number per rotor, $\Omega$ is the rotor angular velocity (which is found in the BEMT tool in an iteration), $a$ is the speed of sound, and $\Delta S$ is the distance between the rotor and the observer. $T$ is the rotor thrust, $Q$ is the rotor torque (also coming from the BEMT), and $\theta$ is the elevation angle (in rad) plus $\frac{pi}{2}$ between the observer and the rotor hub. $\rho$ is the air density, $c$ is the blade chord and $t$ is the blade maximum thickness. $J_{mB}$ is a Bessel function of the first kind of order $mB$. An effective rotor radius of $R_e = 0.8 R$ is recommended in \cite{Brown2018} and is an assumption that approximates the integral that should be used for more accurate predictions. These improvements will be implemented in the next phase of the design phase if deemed necessary.
 
 
-\paragraph{Vortex Noise}, also referred to as broadband noise is (as the name suggests) broadband in nature (continuous frequency spectrum). A model for vortex noise is derived in Appendix D A of reference \cite{Brown2018}, but is only presented in final form here:
+\paragraph{Vortex Noise} Also referred to as broadband noise is (as the name suggests) broadband in nature (continuous frequency spectrum). A model for vortex noise is derived in Appendix D A of reference \cite{Brown2018}, but is only presented in final form here:
 
 \begin{align}
     SPL = 20 \log_10 \bigg[ K_2 \frac{V_T}{\rho (\Delta S)} \sqrt{\frac{NT}{s} \Big(\frac{T}{A} \Big)} \bigg] \\
-    f_{peak} = \frac{(V_{0.7}\text{St})}{h}
+    f_{peak} = \frac{(V_{0.7})\text{St}}{h}
 \end{align}
 
 where $T/A$ is the rotor disk loading; $K_2$ is a semi-empirical constant. Although vortex noise is broadband it has a peak frequency $f_{peak}$, which is a function of 0.7 times the tip speed, the projected blade thickness $h$ and the Strouhal number St. With the peak frequency known, the vortex-noise frequency spectrum can be obtained using the method in Appendix D B of \cite{Brown2018}.
@@ -575,7 +575,7 @@ Human ears have different responses at different frequencies. When it comes to s
 
 \paragraph{Atmospheric Attenuation}
 
-On top of the procedure for noise prediction outlined in \cite{Brown2018}, a model for atmospheric attenuation based on frequency of emitted sound and atmospheric parameters was implemented \footnote{\url{ https://en.wikibooks.org/wiki/Engineering_Acoustics/Outdoor_Sound_Propagation} accessed on 20/05/2019.}.
+On top of the procedure for noise prediction outlined in \cite{Brown2018}, a model for atmospheric attenuation based on frequency of emitted sound and atmospheric parameters was implemented\footnote{\url{ https://en.wikibooks.org/wiki/Engineering_Acoustics/Outdoor_Sound_Propagation} accessed on 20/05/2019.}.
 
 
 
@@ -1173,7 +1173,7 @@ Evaluating one vehicle and operations concept design at a time quickly and with 
 
 \subsection{Workflow Design}
 
-The user sets $m$ input concepts and a list of $n$ inputs variables REFERENCE HERE to be perturbed within specified ranges and a list of $o$ outputs to be measured. The script evaluates all perturbations to the concepts and returns $o$ output files showing the relative change in the output parameters in $n$ plots (one for each perturbed input). Each plot contains $m$ lines; one for each concept.
+The user sets $m$ input concepts and a list of $n$ inputs variables (listed in \autoref{AtmosphereIn} \autoref{VehicleIn} \autoref{OperationalIn}) to be perturbed within specified ranges and a list of $o$ outputs to be measured. The script evaluates all perturbations to the concepts and returns $o$ output files showing the relative change in the output parameters in $n$ plots (one for each perturbed input). Each plot contains $m$ lines; one for each concept.
 
 The plots can be output using percentage changes for perturbation variables and/or output parameters or using the actual magnitudes or the metrics. Non-convergence of MTOW or BEMT for a certain input is treated as NaNs and those parts of the lines are not plotted.
 
