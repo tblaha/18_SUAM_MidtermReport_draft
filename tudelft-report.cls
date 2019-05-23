@@ -243,7 +243,7 @@
 
 %% We use A4 paper with slightly smaller margins than the default (scale = 0.7).
 %\geometry{a4paper,hscale=0.75,vscale=0.8}
-\geometry{a4paper,left=22mm,right=22mm, top=35mm, bottom=22mm} % changed this to make margins smaller but still comply to project guide
+\geometry{a4paper,left=20mm,right=20mm, top=32mm, bottom=20mm} % changed this to make margins smaller but still comply to project guide
 % 26-04-19
 
 %% Redefine the title command to accept an optional subtitle
@@ -665,3 +665,11 @@
     urlcolor=title
 }
 
+
+
+
+
+
+
+% cram factor
+\renewcommand{\baselinestretch}{0.9} 

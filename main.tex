@@ -128,10 +128,12 @@ by
 
 \setcounter{page}{3}
 
+\begin{multicols}{2}
 \newcommand{\nomunit}[1]{%
 \renewcommand{\nomentryend}{\hspace*{\fill}#1}}
 \input{Chapters/Nomenclature.tex}
 \printnomenclature
+\end{multicols}
 
 \glsaddall
 \printnoidxglossary[type=\acronymtype,  title=List of Abbreviations]
