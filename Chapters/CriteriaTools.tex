@@ -397,6 +397,63 @@ Currently, it is being used only in hover, but for proper optimization it will h
 %Extend to forward flight.
  %Sensitivity to omega and Q
 
+\begin{figure}[H]
+\captionsetup[subfigure]{justification=centering}
+\begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Leishman_inflow.png}
+    \caption{Spanwise inflow distribution prediction by the BEMT in \cite{BEMT} and the Maryland Free Vortex Model in hover (torque balance)}
+    \label{fig:blade2d}
+\end{subfigure}
+\begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/verification_inflow.pdf}
+    \caption{Spanwise power coefficient prediction by implemented BEMT tool in hover (torque balance)}
+    \label{fig:disks}
+\end{subfigure}
+    \captionsetup{justification=centering}
+    \caption{Verification plots for upper and lower rotor inflow distribution prediction of the Harrington 1 rotor.}
+    \label{fig:BEMT}
+\end{figure}
+
+\begin{figure}[H]
+\captionsetup[subfigure]{justification=centering}
+\begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Leishman_CT.png}
+    \caption{Spanwise thrust coefficient prediction by the BEMT in \cite{BEMT} and the Maryland Free Vortex Model in hover (torque balance)}
+    \label{fig:blade2d}
+\end{subfigure}
+\begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/CT_plot.pdf}
+    \caption{Spanwise power coefficient prediction by implemented BEMT tool in hover (torque balance)}
+    \label{fig:disks}
+\end{subfigure}
+    \captionsetup{justification=centering}
+    \caption{Verification plots for upper and lower rotor thrust coefficient prediction of the Harrington 1 rotor.}
+    \label{fig:BEMT}
+\end{figure}
+
+\begin{figure}[H]
+\captionsetup[subfigure]{justification=centering}
+\begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Leishman_CP.png}
+    \caption{Spanwise power coefficient prediction by the BEMT in \cite{BEMT} and the Maryland Free Vortex Model in hover (torque balance)}
+    \label{fig:blade2d}
+\end{subfigure}
+\begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/CP_plot.pdf}
+    \caption{Spanwise power coefficient prediction by implemented BEMT tool in hover (torque balance)}
+    \label{fig:disks}
+\end{subfigure}
+    \captionsetup{justification=centering}
+    \caption{Verification plots for upper and lower rotor power coefficient prediction of the Harrington 1 rotor.}
+    \label{fig:BEMT}
+\end{figure}
+
 \subsection{Vehicle Noise}
 
 
@@ -1020,7 +1077,7 @@ A calculation that also emerges from the Vehicle and Operational updated objects
                        &    obj.cost.perhub     &    USD/hub    &   Cost to build a hub  \\ \cline{2-4}
                        &    obj.clearancegamma     &    rad    &   XXX  \\ \Xhline{2\arrayrulewidth}
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Variable}}}}  
-                       &    obj.piloting     &    \begin{tabular}[c]{@{}l@{}}'piloted' or\\ 'autonomous'\end{tabular}    &   XXX  \\ \cline{2-4}
+                       &    obj.piloting     &    -    &   'piloted' or 'autonomous'  \\ \cline{2-4}
                        &    obj.min\_range     &    m    &   Minimum range???  \\ \cline{2-4}
                        &    obj.cruise.vel     &    m/s    &   Cruise velocity  \\ \cline{2-4}
                        &    obj.climb.vclimb     &    m/s    &   Average velocity during climb  \\ \cline{2-4}
@@ -1036,17 +1093,16 @@ A calculation that also emerges from the Vehicle and Operational updated objects
 \centering
 \caption{Vehicle inputs}
 \label{VehicleIn}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|l|}
 \Xhline{2\arrayrulewidth}
 \multicolumn{1}{|l|}{} & \textbf{Parameter} & \textbf{Unit} & \textbf{Description} \\ \Xhline{2\arrayrulewidth}
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Fixed}}}}  
-                       &    obj.propunit     &    XXX    &   XXX  \\ \cline{2-4} 
-                       &    obj.pax\_mass     &    kg    &   Passenger+payload mass (per passenger)  \\ \cline{2-4} 
-                       &    obj.coax.trim     &    -    &   Coaxial rotor; ratio between lower rotor pitch and upper rotor pitch  \\ \cline{2-4}
-                       &    obj.coax.kappaint     &    XXX    &   Coaxial rotor; induced power interference factor  \\ \cline{2-4}
+                       &    obj.pax\_mass     &    kg    &   \begin{tabular}[c]{@{}l@{}}Passenger+payload mass (per\\ passenger)\end{tabular}  \\ \cline{2-4} 
+                       &    obj.coax.trim     &    -    &   \begin{tabular}[c]{@{}l@{}}Coaxial rotor; ratio between lower rotor pitch\\ and upper rotor pitch\end{tabular}  \\ \cline{2-4}
+                       &    obj.coax.kappaint     &    XXX    &   \begin{tabular}[c]{@{}l@{}}Coaxial rotor; induced power interference\\ factor\end{tabular}  \\ \cline{2-4}
                        &    obj.coax.rd     &    XXX    &   Coaxial rotor; contraction radius  \\ \cline{2-4}
-                       &    obj.cost.perkgmtow     &    \$    &   XXX  \\ \cline{2-4}
-                       &    obj.cost.avionics     &    \$    &   XXX  \\ \cline{2-4}
+                       &    obj.cost.perkgmtow     &    USD    &   XXX  \\ \cline{2-4}
+                       &    obj.cost.avionics     &    USD    &   XXX  \\ \cline{2-4}
                        &    obj.perf.nc     &    -    &   Cruise efficiency  \\ \cline{2-4}
                        &    obj.perf.nh     &    -    &   Hover efficiency  \\ \cline{2-4}
                        &    obj.perf.LoDclimb     &    -    &   Lift over drag - Climb  \\ \cline{2-4}
@@ -1063,7 +1119,7 @@ A calculation that also emerges from the Vehicle and Operational updated objects
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Variable}}}}  
                        &    obj.max\_dim     &    m    &   Vehicle maximum dimension (any direction) \\ \cline{2-4}
                        &    obj.pax     &    people    &   Pax capacity vehicle \\ \cline{2-4}
-                       &    obj.config     &    -    &   Vehicle configuration (outlier/tilt/fixed/multi/average)  \\ \cline{2-4}
+                       &    obj.config     &    -    &   \begin{tabular}[c]{@{}l@{}}Vehicle configuration (outlier/tilt/fixed/multi\\/average)\end{tabular}  \\ \cline{2-4}
                        &    obj.struc.percent     &    \%    &   Vehicle structural percentage  \\ \cline{2-4}
                        &    obj.bat.P\_dens     &    W/kg    &   Battery power density  \\ \cline{2-4}
                        &    obj.bat.E\_dens     &    Wh/kg    &   Battery energy density  \\ \cline{2-4}
@@ -1074,7 +1130,7 @@ A calculation that also emerges from the Vehicle and Operational updated objects
                        &    modelpropunit.num     &    -    &   Number of units in a propulsion unit  \\ \cline{2-4}
                        &    modelpropunit.usage     &    -    &   Propulsion unit usage  \\ \cline{2-4}
                        &    modelpropunit.config     &    -    &   Rotor configuration in propulsion unit  \\ \cline{2-4}
-                       &    modelpropunit.T\_percent\_hov     &    \%    &   Percentage of hover taken up by a propulsion unit  \\ \cline{2-4}
+                       &    modelpropunit.T\_percent\_hov     &    \%    &   \begin{tabular}[c]{@{}l@{}}Percentage of hover taken up by a propulsion\\ unit\end{tabular}  \\ \cline{2-4}
                        &    modelrotor(1).blades.num     &    -    &   Number of blades per rotor  \\ \cline{2-4}
                        &    modelrotor(1).radius     &    m    &   Rotor radius  \\ \cline{2-4}
                        &    modelrotor(1).omega     &    rad/s    &   Rotor radial velocity  \\ \Xhline{2\arrayrulewidth}
@@ -1085,7 +1141,7 @@ A calculation that also emerges from the Vehicle and Operational updated objects
 \centering
 \caption{Atmosphere inputs}
 \label{AtmosphereIn}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|l|}
 \Xhline{2\arrayrulewidth}
 \multicolumn{1}{|l|}{} & \textbf{Parameter} & \textbf{Unit} & \textbf{Description} \\ \Xhline{2\arrayrulewidth}
 \multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Fixed}}}}  
@@ -1095,15 +1151,6 @@ A calculation that also emerges from the Vehicle and Operational updated objects
                        &    obj.wind     &    $m/s$    &   Local wind speed  \\ \cline{2-4}
                        &    obj.rel\_humidity     &    XXX    &   Local humidity  \\ \cline{2-4}
                        &    obj.p     &    $Pa$    &   Ambient pressure  \\ \Xhline{2\arrayrulewidth}
-\multirow{3}{*}{\rotatebox[origin=c]{90}{{\textbf{Variable}}}}  
-                       &    XXX     &    XXX    &   XXX  \\ \cline{2-4}
-                       &    XXX     &    XXX    &   XXX  \\ \cline{2-4}
-                       &    XXX     &    XXX    &   XXX  \\ \cline{2-4}
-                       &    XXX     &    XXX    &   XXX  \\ \cline{2-4}
-                       &    XXX     &    XXX    &   XXX  \\ \cline{2-4}
-                       &    XXX     &    XXX    &   XXX  \\ \cline{2-4}
-                       &    XXX     &    XXX    &   XXX  \\ \cline{2-4}
-                       &    XXX     &    XXX    &   XXX  \\ \Xhline{2\arrayrulewidth}
 \end{tabular}
 \end{table}
 
